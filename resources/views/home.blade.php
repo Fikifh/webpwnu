@@ -3,7 +3,7 @@
 <head>
     <title>PWNU</title>
     <meta charset="UTF-8">
-    <meta name="description" content="Website Resmi Pengurus Wilayah Nahdlatul Ulama.">
+    <meta name="description" content="Website Resmi Pengurus Wilayah Nahdlatul Ulama">
     <meta name="keywords" content="pwnu, nu, nahdatul ulama, nkri">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
