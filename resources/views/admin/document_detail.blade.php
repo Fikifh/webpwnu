@@ -811,15 +811,15 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><a href="{{response()->download(public_path(). "/ktp/".$userData->ktp) }}"><img src="{{asset("/ktp/".$userData->ktp) }}" class="thumbnail-detail"/></a></td>
-                                <td><a href="{{response()->download(public_path(). "/surdes/".$userData->surdes) }}"><img src="{{asset("/surdes/".$userData->surdes) }}" class="thumbnail-detail"/></a></td>
-                                <td><a href="{{response()->download(public_path(). "/suror/".$userData->suror) }}"><img src="{{asset("/suror/".$userData->suror) }}" class="thumbnail-detail"/></a></td>
-                                <td><a href="{{response()->download(public_path(). "/bukti_hafalan/".$userData->bukti_hafalan) }}"><img src="{{asset("/bukti_hafalan/".$userData->bukti_hafalan) }}" class="thumbnail-detail"/></a></td>
-                                <td><a href="{{response()->download(public_path(). "/skck/".$userData->skck) }}"><img src="{{asset("/skck/".$userData->skck) }}" class="thumbnail-detail"/></a></td>
-                                <td><a href="{{response()->download(public_path(). "/sur_ket_hafalan/".$userData->sur_ket_hafalan) }}"><img src="{{asset("/sur_ket_hafalan/".$userData->sur_ket_hafalan) }}" class="thumbnail-detail"/></a></td>
-                                <td><a href="{{response()->download(public_path(). "/syahadah/".$userData->syahadah) }}"><img src="{{asset("/syahadah/".$userData->syahadah) }}" class="thumbnail-detail"/></a></td>
-                                <td><a href="{{response()->download(public_path(). "/cv/".$userData->cv) }}"><img src="{{asset("/cv/".$userData->cv) }}" class="thumbnail-detail"/></a></td>
-                                <td><a href="{{response()->download(public_path(). "/foto/".$userData->foto) }}"><img src="{{asset("/foto/".$userData->foto) }}" class="thumbnail-detail"/></a></td>
+                                <td><a href="{{response()->download(public_path(). "/dokumenuser/".$userData->user_id."/ktp/".$userData->ktp) }}"><img src="{{asset("/dokumenuser/".$userData->user_id."/ktp/".$userData->ktp) }}" class="thumbnail-detail"/></a></td>
+                                <td><a href="{{response()->download(public_path(). "/dokumenuser/".$userData->user_id."/surdes/"."/".$userData->surdes) }}"><img src="{{asset("/dokumenuser/".$userData->user_id."/surdes/".$userData->surdes) }}" class="thumbnail-detail"/></a></td>
+                                <td><a href="{{response()->download(public_path(). "/dokumenuser/".$userData->user_id."/suror/".$userData->suror) }}"><img src="{{asset("/dokumenuser/".$userData->user_id."/suror/".$userData->suror) }}" class="thumbnail-detail"/></a></td>
+                                <td><a href="{{response()->download(public_path(). "/dokumenuser/".$userData->user_id."/bukti_hafalan/".$userData->bukti_hafalan) }}"><img src="{{asset("/dokumenuser/".$userData->user_id."/bukti_hafalan/".$userData->bukti_hafalan) }}" class="thumbnail-detail"/></a></td>
+                                <td><a href="{{response()->download(public_path(). "/dokumenuser/".$userData->user_id."/skck/".$userData->skck) }}"><img src="{{asset("/dokumenuser/".$userData->user_id."/skck/".$userData->skck) }}" class="thumbnail-detail"/></a></td>
+                                <td><a href="{{response()->download(public_path(). "/dokumenuser/".$userData->user_id."/sur_ket_hafalan/".$userData->sur_ket_hafalan) }}"><img src="{{asset("/dokumenuser/".$userData->user_id."/sur_ket_hafalan/".$userData->sur_ket_hafalan) }}" class="thumbnail-detail"/></a></td>
+                                <td><a href="{{response()->download(public_path(). "/dokumenuser/".$userData->user_id."/syahadah/".$userData->syahadah) }}"><img src="{{asset("/dokumenuser/".$userData->user_id."/syahadah/".$userData->syahadah) }}" class="thumbnail-detail"/></a></td>
+                                <td><a href="{{response()->download(public_path(). "/dokumenuser/".$userData->user_id."/cv/".$userData->cv) }}"><img src="{{asset("/dokumenuser/".$userData->user_id."/cv/".$userData->cv) }}" class="thumbnail-detail"/></a></td>
+                                <td><a href="{{response()->download(public_path(). "/dokumenuser/".$userData->user_id."/foto/".$userData->foto) }}"><img src="{{asset("/dokumenuser/".$userData->user_id."/foto/".$userData->foto) }}" class="thumbnail-detail"/></a></td>
                             </tr>
                         </tbody>
                     </table>

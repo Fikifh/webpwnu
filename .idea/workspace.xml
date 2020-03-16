@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cdeacd53-bcb3-4fdf-99dc-f298b5db0619" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/document_detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/document_detail.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,6 +172,7 @@
       <workItem from="1584160798248" duration="1960000" />
       <workItem from="1584188202650" duration="12502000" />
       <workItem from="1584247786081" duration="31719000" />
+      <workItem from="1584321926524" duration="886000" />
     </task>
     <servers />
   </component>
@@ -194,9 +196,10 @@
       <screen x="0" y="26" width="1366" height="742" />
     </state>
     <state x="100" y="126" width="1166" height="542" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.26.1366.742@0.26.1366.742" timestamp="1584248589027" />
-    <state x="175" y="144" width="672" height="622" key="search.everywhere.popup" timestamp="1584130191171">
-      <screen x="0" y="144" width="1024" height="624" />
+    <state x="233" y="26" width="897" height="740" key="search.everywhere.popup" timestamp="1584322266280">
+      <screen x="0" y="26" width="1366" height="742" />
     </state>
     <state x="175" y="144" width="672" height="622" key="search.everywhere.popup/0.144.1024.624/1024.118.1366.768@0.144.1024.624" timestamp="1584130191171" />
+    <state x="233" y="26" width="897" height="740" key="search.everywhere.popup/0.26.1366.742@0.26.1366.742" timestamp="1584322266280" />
   </component>
 </project>
