@@ -95,7 +95,7 @@ class ScholarshipController extends Controller
 
         if($documet->save()){
             $message = 'Berhasil Upload';
-            return view('scholarship.success_register', compact('message'));
+            return redirect('/')->with('alert-success', 'Berhasil Upload');
         }
 
 
