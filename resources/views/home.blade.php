@@ -61,7 +61,6 @@
         <li><a href="#">Pages</a>
             <ul class="sub-menu">
                 <li><a href="#">Category</a></li>
-                <li><a href="#">Artist</a></li>
                 <li><a href="#">Blog</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
