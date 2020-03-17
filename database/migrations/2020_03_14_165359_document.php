@@ -16,6 +16,7 @@ class Document extends Migration
         Schema::create('documents', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('user_id')->unsigned();
+            $table->integer('type');
             $table->string('nik');
             $table->string('education');
             $table->string('jumlah_hafalan');

@@ -45,6 +45,9 @@ Route::group(['prefix' => 'admin', 'namespace'=>'Admin', 'middleware'=> ['role:a
    Route::get('detail/{id}', 'AdminController@detailUser');
    Route::get('download-zip/{id}/{name}', 'AdminController@downloadZip');
    Route::get('download-all-files', 'AdminController@downloadall');
+
+   //Print to PDF
+    Route::get('print-to-pdf/{id}', 'AdminController@printToPdf');
 });
 
 //Route::get('/home', 'HomeController@index')->name('home');

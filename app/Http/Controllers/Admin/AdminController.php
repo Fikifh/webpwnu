@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\models\scholarship\DocumentModel;
+use App\User;
+use Barryvdh\DomPDF\PDF;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use ZipArchive;
@@ -11,6 +13,15 @@ use File;
 
 class AdminController extends Controller
 {
+    public function printToPdf($id){
+        $data = DocumentModel::where('user_id', 4)->join('users', 'users.id', 'documents.user_id')->first();
+        return $data;
+        $pdf = PDF::loadView('participant_pdf', ['participant' => $participant]);
+        return $pdf->download($id.'-'.$participant->name);
+    }
+
+
+
     public function detailUser($id){
         $userData = DocumentModel::where('user_id', $id)->first();
         return view('admin.document_detail', compact('userData'));

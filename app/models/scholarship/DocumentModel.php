@@ -2,14 +2,17 @@
 
 namespace App\models\scholarship;
 
+use App\User;
 use Illuminate\Database\Eloquent\Model;
 
 class DocumentModel extends Model
 {
     protected $fillable = [
+        'type',
         'nik',
         'education',
         'jumlah_hafalan',
+        'user_id',
         'ktp',
         'ijazah',
         'surdes',
@@ -22,4 +25,8 @@ class DocumentModel extends Model
         'foto',
     ];
     protected $table = 'documents';
+
+    public function users(){
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }

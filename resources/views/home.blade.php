@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <title>PWNU</title>
+    <title>Sadesha Provinsi Jawa Barat</title>
     <meta charset="UTF-8">
-    <meta name="description" content="Website Resmi Pengurus Wilayah Nahdlatul Ulama">
-    <meta name="keywords" content="pwnu, nu, nahdatul ulama, nkri">
+    <meta name="description" content="Website Pendaftaran Beasiswa dan Pemberdayaan Sadesha PWNU Jawa Barat">
+    <meta name="keywords" content="sadesha, pwnu, nu, nahdatul ulama, nkri">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="shortcut icon"/>
+    <link href="{{ asset("/bower_components/landing-page/img/pwnulogo.jpg") }}" rel="shortcut icon"/>
 
     <!-- Google font -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
@@ -50,25 +50,24 @@
             </div>
         @else
             <div class="user-panel">
-                <a href="{{url('login')}}" class="login">Login</a>
-                <a href="{{url('register')}}" class="register">Create an account</a>
+                <a href="{{url('login')}}" class="login">Masuk</a>
+                <a href="{{url('register')}}" class="register">Buat Akun</a>
             </div>
         @endif
     </div>
     <ul class="main-menu">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Pages</a>
             <ul class="sub-menu">
-                <li><a href="category.html">Category</a></li>
-                <li><a href="playlist.html">Playlist</a></li>
-                <li><a href="artist.html">Artist</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">Category</a></li>
+                <li><a href="#">Artist</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </li>
-        <li><a href="blog.html">News</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Contact</a></li>
     </ul>
 </header>
 <!-- Header section end -->
@@ -81,8 +80,8 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="hs-text">
-                            <h2><span>Segera</span> Daftar</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. </p>
+                            <h2><span>Program</span> Pemberdayaan</h2>
+                            <p>Provinsi juara lahir batin melalui program Sadesha dengan menyediakan satu hafidz untuk satu desa di seluruh Jabar dan mewujudkan Jabar sebagai gerbang ahli sunnah wal jamaah. </p>
                             @if(\Illuminate\Support\Facades\Auth::user())
                                 @if(\App\models\scholarship\DocumentModel::where('user_id', session('id'))->first())
                                     <a href="#" class="site-btn">Anda Terdaftar</a>
@@ -105,8 +104,8 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="hs-text">
-                            <h2><span>Kesempatan </span> Mengikuti Beasiswa.</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. </p>
+                            <h2><span>Program </span> Beasiswa</h2>
+                            <p>Provinsi juara lahir batin melalui program Sadesha dengan menyediakan satu hafidz untuk satu desa di seluruh Jabar dan mewujudkan Jabar sebagai gerbang ahli sunnah wal jamaah. </p>
                             @if(\Illuminate\Support\Facades\Auth::user())
                                 @if(\App\models\scholarship\DocumentModel::where('user_id', session('id'))->first())
                                     <a href="#" class="site-btn">Anda Terdaftar</a>
@@ -128,62 +127,62 @@
 </section>
 <!-- Hero section end -->
 
-{{--<!-- Intro section -->--}}
-{{--<section class="intro-section spad">--}}
-{{--    <div class="container">--}}
+<!-- Intro section -->
+<section class="intro-section spad">
+    <div class="container">
 {{--        <div class="row">--}}
-{{--            <div class="col-lg-6">--}}
-{{--                <div class="section-title">--}}
-{{--                    <h2>Unlimited Access to 100K tracks</h2>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--            <div class="col-lg-6">--}}
-{{--                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum sus-pendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>--}}
-{{--                <a href="#" class="site-btn">Try it now</a>--}}
-{{--            </div>--}}
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <h2 align="center">Jabar Juara Lahir Batin</h2>
+                </div>
+                <div class="col-lg-12">
+                    <p align="center">Provinsi juara lahir batin melalui program Sadesha dengan menyediakan satu hafidz untuk satu desa di seluruh Jabar dan mewujudkan Jabar sebagai gerbang ahli sunnah wal jamaah.</p>
+                </div>
+            </div>
 {{--        </div>--}}
-{{--    </div>--}}
-{{--</section>--}}
-{{--<!-- Intro section end -->--}}
+    </div>
+</section>
+<!-- Intro section end -->
 
-{{--<!-- How section -->--}}
-{{--<section class="how-section spad set-bg" data-setbg="img/how-to-bg.jpg">--}}
-{{--    <div class="container text-white">--}}
-{{--        <div class="section-title">--}}
-{{--            <h2>How it works</h2>--}}
-{{--        </div>--}}
-{{--        <div class="row">--}}
+<!-- How section -->
+<section class="how-section spad set-bg" data-setbg="img/how-to-bg.jpg">
+    <div class="container text-white">
+        <div class="section-title">
+            <h2>Cara Mendaftar</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="how-item">
+                    <div class="hi-icon">
+                        <img src="{{ asset("bower_components/landing-page/img/icons/pointer.png" ) }}" alt="Isi data diri">
+                    </div>
+                    <h4>Buat Akun & Masuk</h4>
+                    <p align="justify">Silahkan buat akun dengan cara meng klik <b>Buat Akun</b> di pojok kanan atas. Kemudan akan di redirect ke halaman masuk, dan silahkan masuk dengan cara mengisi email dan password yang sudah anda masukan pada saat buat akun
+                    </p>
+                </div>
+            </div>
 {{--            <div class="col-md-4">--}}
 {{--                <div class="how-item">--}}
 {{--                    <div class="hi-icon">--}}
-{{--                        <img src="img/icons/brain.png" alt="">--}}
+{{--                        <img src="{{ asset("bower_components/landing-page/img/icons/pointer.png" ) }}" alt="Isi data diri">--}}
 {{--                    </div>--}}
-{{--                    <h4>Create an account</h4>--}}
-{{--                    <p>Lorem ipsum dolor sit amet, consectetur adipi-scing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum sus-pendisse ultrices gravida. </p>--}}
+{{--                    <h4>Isi Form Data Diri</h4>--}}
+{{--                    <p>Isi Form Data Diri <b>setelah klik Buat Akun</b>. </p>--}}
 {{--                </div>--}}
 {{--            </div>--}}
-{{--            <div class="col-md-4">--}}
-{{--                <div class="how-item">--}}
-{{--                    <div class="hi-icon">--}}
-{{--                        <img src="img/icons/pointer.png" alt="">--}}
-{{--                    </div>--}}
-{{--                    <h4>Choose a plan</h4>--}}
-{{--                    <p>Donec in sodales dui, a blandit nunc. Pellen-tesque id eros venenatis, sollicitudin neque sodales, vehicula nibh. Nam massa odio, portti-tor vitae efficitur non. </p>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--            <div class="col-md-4">--}}
-{{--                <div class="how-item">--}}
-{{--                    <div class="hi-icon">--}}
-{{--                        <img src="img/icons/smartphone.png" alt="">--}}
-{{--                    </div>--}}
-{{--                    <h4>Download Music</h4>--}}
-{{--                    <p>Ablandit nunc. Pellentesque id eros venenatis, sollicitudin neque sodales, vehicula nibh. Nam massa odio, porttitor vitae efficitur non, ultric-ies volutpat tellus. </p>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--</section>--}}
-{{--<!-- How section end -->--}}
+            <div class="col-md-4">
+                <div class="how-item">
+                    <div class="hi-icon">
+                        <img src="{{ asset("bower_components/landing-page/img/icons/pointer.png" ) }}" alt="Isi data diri">
+                    </div>
+                    <h4>Upload Berkas Persyaratan</h4>
+                    <p>Upload Berkas Persyaran dengan cara mengklik <b>tombol Upload Persyaratan</b> wana hijau pada Slider.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- How section end -->
 
 {{--<!-- Concept section -->--}}
 {{--<section class="concept-section spad">--}}
