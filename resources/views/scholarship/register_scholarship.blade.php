@@ -1,16 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="id">
 <head>
-    <!-- Required meta tags-->
+    <title>Sadesha Provinsi Jawa Barat</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Colorlib Templates">
-    <meta name="author" content="Colorlib">
-    <meta name="keywords" content="Colorlib Templates">
+    <meta name="description" content="Website Pendaftaran Beasiswa dan Pemberdayaan Sadesha PWNU Jawa Barat">
+    <meta name="keywords" content="sadesha, pwnu, nu, nahdatul ulama, nkri">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Title Page-->
-    <title>Pendaftaran Beasiswa</title>
+    <!-- Favicon -->
+    <link href="{{ asset("/bower_components/landing-page/img/pwnulogo.jpg") }}" rel="shortcut icon"/>
 
     <!-- Icons font CSS-->
     <link href="{{ asset("bower_components/regform/vendor/mdi-font/css/material-design-iconic-font.min.css") }}" rel="stylesheet" media="all">
@@ -24,9 +22,69 @@
 
     <!-- Main CSS-->
     <link href="{{ asset("bower_components/regform/css/main.css") }}" rel="stylesheet" media="all">
+
+    <!--header -->
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{{ asset("/bower_components/landing-page/css/bootstrap.min.css") }}"/>
+    <link rel="stylesheet" href="{{ asset("/bower_components/landing-page/css/font-awesome.min.css") }}"/>
+    <link rel="stylesheet" href="{{ asset("/bower_components/landing-page/css/owl.carousel.min.css") }}"/>
+    <link rel="stylesheet" href="{{ asset("/bower_components/landing-page/css/slicknav.min.css") }}"/>
+
+    <!-- Main Stylesheets -->
+    <link rel="stylesheet" href="{{ asset("/bower_components/landing-page/css/style.css") }}"/>
+
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 
 <body>
+<!-- Page Preloder -->
+<div id="preloder">
+    <div class="loader"></div>
+</div>
+
+<!-- Header section -->
+<header class="header-section clearfix">
+    <a href="index.html" class="site-logo">
+        <img id="header-logo" src="{{ asset("/bower_components/landing-page/img/pwnulogo.jpg") }}" alt="">
+    </a>
+    <div class="header-right">
+        <a href="#" class="hr-btn">Help</a>
+        <span>|</span>
+        @if(\Illuminate\Support\Facades\Auth::user())
+            <div class="user-panel">
+                <a href="" class="login">{{\Illuminate\Support\Facades\Session::get('name')}}</a>
+                <a href="{{url('logout')}}">Logout</a>
+            </div>
+        @else
+            <div class="user-panel">
+                <a href="{{url('login')}}" class="login">Masuk</a>
+                <a href="{{url('register')}}" class="register">Buat Akun</a>
+            </div>
+        @endif
+    </div>
+    <ul class="main-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Pages</a>
+            <ul class="sub-menu">
+                <li><a href="#">Category</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</header>
+<!-- Header section end -->
+
 <div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
     <div class="wrapper wrapper--w790">
         <div class="card card-5">
