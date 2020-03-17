@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdeacd53-bcb3-4fdf-99dc-f298b5db0619" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/scholarship/form.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/scholarship/register_scholarship.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/scholarship/register_scholarship.blade.php" afterDir="false" />
     </list>
@@ -179,7 +180,7 @@
       <workItem from="1584247786081" duration="31719000" />
       <workItem from="1584321926524" duration="2277000" />
       <workItem from="1584347848815" duration="1257000" />
-      <workItem from="1584449145751" duration="7953000" />
+      <workItem from="1584449145751" duration="8495000" />
     </task>
     <servers />
   </component>
@@ -199,6 +200,10 @@
       <screen x="0" y="26" width="1366" height="742" />
     </state>
     <state x="332" y="53" width="705" height="682" key="#phpunit.xml/0.26.1366.742@0.26.1366.742" timestamp="1584253558985" />
+    <state x="326" y="310" width="361" height="142" key="NewPhpFileDialog" timestamp="1584463406874">
+      <screen x="0" y="26" width="1024" height="742" />
+    </state>
+    <state x="326" y="310" width="361" height="142" key="NewPhpFileDialog/0.26.1024.742/1024.0.1366.768@0.26.1024.742" timestamp="1584463406874" />
     <state x="100" y="126" width="1166" height="542" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1584248589027">
       <screen x="0" y="26" width="1366" height="742" />
     </state>

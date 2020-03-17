@@ -245,5 +245,15 @@
 
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 
+<!-- Footer section end -->
+
+<!--====== Javascripts & Jquery ======-->
+<script src="{{ asset("/bower_components/landing-page/js/jquery-3.2.1.min.js") }}"></script>
+<script src="{{ asset("/bower_components/landing-page/js/bootstrap.min.js") }}"></script>
+<script src="{{ asset("/bower_components/landing-page/js/jquery.slicknav.min.js") }}"></script>
+<script src="{{ asset("/bower_components/landing-page/js/owl.carousel.min.js") }}"></script>
+<script src="{{ asset("/bower_components/landing-page/js/mixitup.min.js") }}"></script>
+<script src="{{ asset("/bower_components/landing-page/js/main.js") }}"></script>
+
 </html>
 <!-- end document-->
