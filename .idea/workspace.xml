@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdeacd53-bcb3-4fdf-99dc-f298b5db0619" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/scholarship/form.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/scholarship/register_scholarship.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/scholarship/register_scholarship.blade.php" afterDir="false" />
     </list>
@@ -180,7 +179,7 @@
       <workItem from="1584247786081" duration="31719000" />
       <workItem from="1584321926524" duration="2277000" />
       <workItem from="1584347848815" duration="1257000" />
-      <workItem from="1584449145751" duration="8495000" />
+      <workItem from="1584449145751" duration="8834000" />
     </task>
     <servers />
   </component>
