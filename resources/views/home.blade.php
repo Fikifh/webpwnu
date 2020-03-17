@@ -85,7 +85,7 @@
                                 @if(\App\models\scholarship\DocumentModel::where('user_id', session('id'))->first())
                                     <a href="#" class="site-btn">Anda Terdaftar</a>
                                 @else
-                                    <a href="{{url('register-scholarship?email='.\Illuminate\Support\Facades\Session::get('email'))}}" class="site-btn">Daftar</a>
+                                    <a href="{{url('register-scholarship?email='.\Illuminate\Support\Facades\Session::get('email'))}}" class="site-btn">Upload Persyaratan</a>
                                 @endif
                             @endif
                         </div>
@@ -109,7 +109,7 @@
                                 @if(\App\models\scholarship\DocumentModel::where('user_id', session('id'))->first())
                                     <a href="#" class="site-btn">Anda Terdaftar</a>
                                 @else
-                                    <a href="{{url('register-scholarship?email='.\Illuminate\Support\Facades\Session::get('email'))}}" class="site-btn">Daftar</a>
+                                    <a href="{{url('register-scholarship?email='.\Illuminate\Support\Facades\Session::get('email'))}}" class="site-btn">Upload Persyaratan</a>
                                 @endif
                             @endif
                         </div>
