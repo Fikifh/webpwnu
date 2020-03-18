@@ -11,18 +11,27 @@
     <title></title>
 </head>
 <body onload="window.print()">
-<div class="row col-sm-12">
+<div class="row">
     <div class="col-sm-8">
         @if($participant->type == 1)
             <p align="center">Form Pendaftaran Pemberdayaan</p>
         @else
             <p align="center">Form Pendaftaran Beasiswa</p>
         @endif
-        <table width="100%">
+        <table>
             <tr>
                 <td>Nama Lengkap</td>
                 <td>:</td>
                 <td>{{$participant->name}}</td>
+                <td rowspan="7">
+                    @if($participant->type ==1)
+                        <img style="height:151.18110236px; width: 113.38582677px"
+                             src="{{base_path()."/public/dokumenuser/pemberdayaan/".$participant->user_id.'/foto/'.$participant->foto}}"/>
+                    @else
+                        <img style="height:151.18110236px; width: 113.38582677px"
+                             src="{{base_path()."/public/dokumenuser/beasiswa/".$participant->user_id.'/foto/'.$participant->foto}}"/>
+                    @endif
+                </td>
             </tr>
 
             <tr>
@@ -95,100 +104,89 @@
             </tr>
         </table>
     </div>
-    <div class="col-sm-2">
-        @if($participant->type ==1)
-            <img style="height:151.18110236px; width: 113.38582677px"
-                 src="{{base_path("/dokumenuser/pemberdayaan/".$participant->user_id.'/foto/'.$participant->foto)}}"/>
-        @else
-            <img style="height:151.18110236px; width: 113.38582677px"
-                 src="{{base_path("/dokumenuser/beasiswa/".$participant->user_id.'/foto/'.$participant->foto)}}"/>
-        @endif
-    </div>
-    <div class="col-sm-12">
-    </div>
 </div>
-<div class="page-break"></div>
-<div class="col-sm-12">
-    <p class="center">KTP</p>
-    @if($participant->type ==1)
-        <img class="a-4" src="{{base_path("/dokumenuser/pemberdayaan/".$participant->user_id.'/ktp/'.$participant->ktp)}}">
-    @else
-        <img class="a-4" src="{{base_path("/dokumenuser/beasiswa/".$participant->user_id.'/ktp/'.$participant->ktp)}}">
-    @endif
-</div>
-<div class="page-break"></div>
-<div class="col-sm-12">
-    <p class="center">Ijazah</p>
-    @if($participant->type ==1)
-        <img class="a-4"
-             src="{{base_path("/dokumenuser/pemberdayaan/".$participant->user_id.'/ijazah/'.$participant->ijazah)}}">
-    @else
-        <img class="a-4"
-             src="{{base_path("/dokumenuser/beasiswa/".$participant->user_id.'/ijazah/'.$participant->ijazah)}}">
-    @endif
-</div>
-<div class="page-break"></div>
-<div class="col-sm-12">
-    <p class="center">Kartu Keluarga</p>
-    @if($participant->type ==1)
-        <img class="a-4" src="{{base_path("/dokumenuser/pemberdayaan/".$participant->user_id.'/kartu-keluarga/'.$participant->kk)}}">
-    @else
-        <img class="a-4" src="{{base_path("/dokumenuser/beasiswa/".$participant->user_id.'/kartu-keluarga/'.$participant->kk)}}">
-    @endif
-</div>
-<div class="page-break"></div>
-<div class="col-sm-12">
-    <p class="center">Surat Rekomendasi dari Desa</p>
-    @if($participant->type ==1)
-        <img class="a-4"
-             src="{{base_path("/dokumenuser/pemberdayaan/".$participant->user_id.'/surdes/'.$participant->surdes)}}">
-    @else
-        <img class="a-4"
-             src="{{base_path("/dokumenuser/beasiswa/".$participant->user_id.'/surdes/'.$participant->surdes)}}">
-    @endif
-</div>
-<div class="page-break"></div>
-<div class="col-sm-12">
-    <p class="center">Surat Rekomendasi dari Ormas</p>
-    @if($participant->type ==1)
-        <img class="a-4"
-             src="{{base_path("/dokumenuser/pemberdayaan/".$participant->user_id.'/suror/'.$participant->suror)}}">
-    @else
-        <img class="a-4" src="{{base_path("/dokumenuser/beasiswa/".$participant->user_id.'/suror/'.$participant->suror)}}">
-    @endif
-</div>
-<div class="page-break"></div>
-<div class="col-sm-12">
-    @if($participant->type ==1)
-        <p class="center">Bukti Hafalan (Syahadah)</p>
-        <img class="a-4"
-             src="{{base_path("/dokumenuser/pemberdayaan/".$participant->user_id.'/bukti_hafalan/'.$participant->bukti_hafalan)}}">
-    @else
-        <p class="center">Surat Keterangan Jumlah Hafalan</p>
-        <img class="a-4"
-             src="{{base_path("/dokumenuser/beasiswa/".$participant->user_id.'/sur_ket_hafalan/'.$participant->sur_ket_hafalan)}}">
-    @endif
-</div>
-<div class="page-break"></div>
-<div class="col-sm-12">
-    <p class="center">SKCK</p>
-    @if($participant->type ==1)
-        <img class="a-4"
-             src="{{base_path("/dokumenuser/pemberdayaan/".$participant->user_id.'/skck/'.$participant->skck)}}">
-    @else
-        <img class="a-4" src="{{base_path("/dokumenuser/beasiswa/".$participant->user_id.'/skck/'.$participant->skck)}}">
-    @endif
-</div>
-<div class="page-break"></div>
-<div class="col-sm-12">
-    <p class="center">CV</p>
-    @if($participant->type ==1)
-        <img class="a-4" src="{{base_path("/dokumenuser/pemberdayaan/".$participant->user_id.'/cv/'.$participant->cv)}}">
-    @else
-        <img class="a-4" src="{{base_path("/dokumenuser/beasiswa/".$participant->user_id.'/cv/'.$participant->cv)}}">
-    @endif
-    <div onload="window.print()" class="page-break"></div>
-</div>
+{{--<div class="page-break"></div>--}}
+{{--<div class="col-sm-12">--}}
+{{--    <p class="center">KTP</p>--}}
+{{--    @if($participant->type ==1)--}}
+{{--        <img class="a-4" src="{{base_path()."/public/dokumenuser/pemberdayaan/".$participant->user_id.'/ktp/'.$participant->ktp}}"/>--}}
+{{--    @else--}}
+{{--        <img class="a-4" src="{{base_path()."/public/dokumenuser/beasiswa/".$participant->user_id.'/ktp/'.$participant->ktp}}"/>--}}
+{{--    @endif--}}
+{{--</div>--}}
+{{--<div class="page-break"></div>--}}
+{{--<div class="col-sm-12">--}}
+{{--    <p class="center">Ijazah</p>--}}
+{{--    @if($participant->type ==1)--}}
+{{--        <img class="a-4"--}}
+{{--             src="{{base_path()."/public/dokumenuser/pemberdayaan/".$participant->user_id.'/ijazah/'.$participant->ijazah}}"/>--}}
+{{--    @else--}}
+{{--        <img class="a-4"--}}
+{{--             src="{{base_path()."/public/dokumenuser/beasiswa/".$participant->user_id.'/ijazah/'.$participant->ijazah}}"/>--}}
+{{--    @endif--}}
+{{--</div>--}}
+{{--<div class="page-break"></div>--}}
+{{--<div class="col-sm-12">--}}
+{{--    <p class="center">Kartu Keluarga</p>--}}
+{{--    @if($participant->type ==1)--}}
+{{--        <img class="a-4" src="{{base_path()."/public/dokumenuser/pemberdayaan/".$participant->user_id.'/kartu-keluarga/'.$participant->kk}}"/>--}}
+{{--    @else--}}
+{{--        <img class="a-4" src="{{base_path()."/public/dokumenuser/beasiswa/".$participant->user_id.'/kartu-keluarga/'.$participant->kk}}"/>--}}
+{{--    @endif--}}
+{{--</div>--}}
+{{--<div class="page-break"></div>--}}
+{{--<div class="col-sm-12">--}}
+{{--    <p class="center">Surat Rekomendasi dari Desa</p>--}}
+{{--    @if($participant->type ==1)--}}
+{{--        <img class="a-4"--}}
+{{--             src="{{base_path()."/public/dokumenuser/pemberdayaan/".$participant->user_id.'/surdes/'.$participant->surdes}}"/>--}}
+{{--    @else--}}
+{{--        <img class="a-4"--}}
+{{--             src="{{base_path()."/public/dokumenuser/beasiswa/".$participant->user_id.'/surdes/'.$participant->surdes}}"/>--}}
+{{--    @endif--}}
+{{--</div>--}}
+{{--<div class="page-break"></div>--}}
+{{--<div class="col-sm-12">--}}
+{{--    <p class="center">Surat Rekomendasi dari Ormas</p>--}}
+{{--    @if($participant->type ==1)--}}
+{{--        <img class="a-4"--}}
+{{--             src="{{base_path()."/public/dokumenuser/pemberdayaan/".$participant->user_id.'/suror/'.$participant->suror}}"/>--}}
+{{--    @else--}}
+{{--        <img class="a-4" src="{{base_path()."/public/dokumenuser/beasiswa/".$participant->user_id.'/suror/'.$participant->suror}}"/>--}}
+{{--    @endif--}}
+{{--</div>--}}
+{{--<div class="page-break"></div>--}}
+{{--<div class="col-sm-12">--}}
+{{--    @if($participant->type ==1)--}}
+{{--        <p class="center">Bukti Hafalan (Syahadah)</p>--}}
+{{--        <img class="a-4"--}}
+{{--             src="{{base_path()."/public/dokumenuser/pemberdayaan/".$participant->user_id.'/bukti_hafalan/'.$participant->bukti_hafalan}}"/>--}}
+{{--    @else--}}
+{{--        <p class="center">Surat Keterangan Jumlah Hafalan</p>--}}
+{{--        <img class="a-4"--}}
+{{--             src="{{base_path()."/public/dokumenuser/beasiswa/".$participant->user_id.'/sur_ket_hafalan/'.$participant->sur_ket_hafalan}}"/>--}}
+{{--    @endif--}}
+{{--</div>--}}
+{{--<div class="page-break"></div>--}}
+{{--<div class="col-sm-12">--}}
+{{--    <p class="center">SKCK</p>--}}
+{{--    @if($participant->type ==1)--}}
+{{--        <img class="a-4"--}}
+{{--             src="{{base_path()."/public/dokumenuser/pemberdayaan/".$participant->user_id.'/skck/'.$participant->skck}}"/>--}}
+{{--    @else--}}
+{{--        <img class="a-4" src="{{base_path()."/public/dokumenuser/beasiswa/".$participant->user_id.'/skck/'.$participant->skck}}"/>--}}
+{{--    @endif--}}
+{{--</div>--}}
+{{--<div class="page-break"></div>--}}
+{{--<div class="col-sm-12">--}}
+{{--    <p class="center">CV</p>--}}
+{{--    @if($participant->type ==1)--}}
+{{--        <img class="a-4" src="{{base_path()."/public/dokumenuser/pemberdayaan/".$participant->user_id.'/cv/'.$participant->cv}}"/>--}}
+{{--    @else--}}
+{{--        <img class="a-4" src="{{base_path()."/public/dokumenuser/beasiswa/".$participant->user_id.'/cv/'.$participant->cv}}"/>--}}
+{{--    @endif--}}
+{{--    <div onload="window.print()" class="page-break"></div>--}}
+{{--</div>--}}
 </body>
 
 <style type="text/css">

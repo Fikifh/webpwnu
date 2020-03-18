@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdeacd53-bcb3-4fdf-99dc-f298b5db0619" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/pwnu.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pwnu.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Scholarship/ScholarshipController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Scholarship/ScholarshipController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/scholarship/DocumentModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/scholarship/DocumentModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin_home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin_home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/print/participant_pdf.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/print/participant_pdf.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +186,7 @@
       <workItem from="1584321926524" duration="2277000" />
       <workItem from="1584347848815" duration="1257000" />
       <workItem from="1584449145751" duration="16417000" />
-      <workItem from="1584495211453" duration="41325000" />
+      <workItem from="1584495211453" duration="43702000" />
     </task>
     <servers />
   </component>
