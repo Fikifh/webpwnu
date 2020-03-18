@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="_token" content="{{ csrf_token() }}">
-    <title>AdminPWNU | Dashboard</title>
+    <title>Admin Sadesha | Dashboard</title>
     <!--bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -805,9 +805,22 @@
                     <!-- ./col -->
                 </div>
                 <!-- /.row -->
+
+                <!-- select list-->
+                <div class="row">
+                    <div class="col col-sm-12">
+                        <form method="GET" action="{{url('admin/list')}}">
+                            <select class="form-group" name="type" id="type">
+                                <option value="1">Pemberdayaan</option>
+                                <option value="2">Beasiswa</option>
+                            </select>
+                            <input type="submit" class="fa fa-filter" value="Filter">
+                        </form>
+                    </div>
+                </div>
                 <!-- Main row -->
                 <div class="row">
-                    <input type="text" hidden="true" value="{{$user = \App\models\scholarship\DocumentModel::all()}}">
+{{--                    <input type="text" hidden="true" value="{{$user = \App\models\scholarship\DocumentModel::all()}}">--}}
                     <!-- Table -->
                     <table class="table table-bordered">
                         <thead>
@@ -823,6 +836,7 @@
                             <th>Pendidikan</th>
                             <th>Jumlah Hafalan</th>
                             <th>Berkas</th>
+                            <th>Print</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -841,13 +855,18 @@
                                 <td>{{$userData->jumlah_hafalan}}</td>
                                 <td>
                                     <a href="{{url('admin/detail/'.$userData->user_id)}}">
-                                        <button alt="Lihat File" class="fa fa-eye fa-circle bg-white"></button>
+                                        <button alt="Lihat File" class="fa fa-eye fa-circle bg-white">Lihat</button>
                                     </a>
                                     <a href="{{url('admin/download-zip/'.$userData->user_id.'/'.$userTable->name)}}">
-                                        <button alt="Download  File" class="fa fa-download fa-circle bg-white"></button>
+                                        <button alt="Download  File" class="fa fa-download fa-circle bg-white">Zip</button>
                                     </a>
                                     <a href="{{url('admin/print-to-pdf/'.$userData->user_id)}}">
-                                        <button alt="Print to PDF File" class="fa fa-print"></button>
+                                        <button alt="Print to PDF File" class="fa fa-print">PDF</button>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="{{url('admin/print-to-printer/'.$userData->user_id)}}" target="_blank">
+                                        <button alt="Lihat File" class="fa fa-print">Print</button>
                                     </a>
                                 </td>
                             </tr>

@@ -7,6 +7,7 @@ use App\models\scholarship\DocumentModel;
 use App\User;
 use Illuminate\Hashing\BcryptHasher;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Route;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
@@ -42,7 +43,7 @@ class UserController extends Controller
                 $userRole = $role->roles($roleId);
                 if($userRole->role_name === 'admin'){
                     $user = DocumentModel::all();
-                    return view('admin_home', compact('user'));
+                    return url('admin');
                 }
                 return redirect('/')->with('alert-success', 'Berhasil Masuk');
             } else {

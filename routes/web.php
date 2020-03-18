@@ -45,12 +45,17 @@ Route::group(['prefix' => 'admin', 'namespace'=>'Admin', 'middleware'=> ['role:a
    Route::get('/', function (){
       return view('admin_home');
    });
+   Route::get('/', 'AdminController@index')->name('admin');
+    Route::get('list', 'AdminController@list')->name('list');
    Route::get('detail/{id}', 'AdminController@detailUser');
    Route::get('download-zip/{id}/{name}', 'AdminController@downloadZip');
    Route::get('download-all-files', 'AdminController@downloadall');
 
    //Print to PDF
     Route::get('print-to-pdf/{id}', 'AdminController@printToPdf');
+
+    //print to Printer
+    Route::get('print-to-printer/{id}', 'AdminController@printToPrinter');
 
     //Export to Excel
     Route::get('export-pemberdayaan-to-excel', 'AdminController@exportPemberdayaanToExcel');

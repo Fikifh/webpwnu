@@ -10,8 +10,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title></title>
 </head>
-<body onload="window.print()">
+<body onpageshow="window.print()">
 <div class="row">
+{{--    <div class="col-sm-8 float-right">--}}
+{{--        <a href="" onsubmit="window.print()" style="text-align: right" target ="_blank" class="btn btn-default float-right"><i class="fa fa-print"></i>Print</a>--}}
+{{--    </div>--}}
     <div class="col-sm-8">
         @if($participant->type == 1)
             <p align="center">Form Pendaftaran Pemberdayaan</p>
@@ -24,13 +27,13 @@
                 <td>:</td>
                 <td>{{$participant->name}}</td>
                 <td rowspan="7">
-                    @if($participant->type ==1)
-                        <img style="height:151.18110236px; width: 113.38582677px"
-                             src="{{base_path()."/public/dokumenuser/pemberdayaan/".$participant->user_id.'/foto/'.$participant->foto}}"/>
-                    @else
-                        <img style="height:151.18110236px; width: 113.38582677px"
-                             src="{{base_path()."/public/dokumenuser/beasiswa/".$participant->user_id.'/foto/'.$participant->foto}}"/>
-                    @endif
+{{--                    @if($participant->type ==1)--}}
+{{--                        <img style="height:151.18110236px; width: 113.38582677px"--}}
+{{--                             src="{{base_path()."/public/dokumenuser/pemberdayaan/".$participant->user_id.'/foto/'.$participant->foto}}"/>--}}
+{{--                    @else--}}
+{{--                        <img style="height:151.18110236px; width: 113.38582677px"--}}
+{{--                             src="{{base_path()."/public/dokumenuser/beasiswa/".$participant->user_id.'/foto/'.$participant->foto}}"/>--}}
+{{--                    @endif--}}
                 </td>
             </tr>
 
@@ -187,8 +190,13 @@
 {{--    @endif--}}
 {{--    <div onload="window.print()" class="page-break"></div>--}}
 {{--</div>--}}
-</body>
 
+</body>
+<script>
+    function printFile() {
+        window.print();
+    }
+</script>
 <style type="text/css">
     * {
         font: 18px Serif;
@@ -215,20 +223,10 @@
         font-size: 12pt;
     }
 
-    .page-break {
-        page-break-after: always;
-    }
-
     .center {
         text-align: center;
         font-weight: bold;
     }
 </style>
-<script type="text/javascript">
-    function print(){
-       return window.print();
-    }
-
-</script>
 </html>
 

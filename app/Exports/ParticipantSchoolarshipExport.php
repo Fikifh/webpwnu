@@ -4,8 +4,9 @@ namespace App\Exports;
 
 use App\models\scholarship\DocumentModel;
 use Maatwebsite\Excel\Concerns\FromCollection;
+use Maatwebsite\Excel\Concerns\WithHeadings;
 
-class ParticipantSchoolarshipExport implements FromCollection
+class ParticipantSchoolarshipExport implements FromCollection, WithHeadings
 {
     /**
      * @return \Illuminate\Support\Collection
@@ -17,7 +18,7 @@ class ParticipantSchoolarshipExport implements FromCollection
         foreach ($participants as $participant) {
             $data []  = [
                 "user_id" => $participant->user_id,
-                "name" => $participant->name,
+                "nama" => $participant->name,
                 "email" => $participant->email,
                 "nomor_hp" => $participant->phone,
                 "nik" => $participant->nik,
@@ -25,15 +26,35 @@ class ParticipantSchoolarshipExport implements FromCollection
                 "nama_pendidikan" => $participant->school_name,
                 "kelas_atau_tingkat" => $participant->school_class,
                 "jenis_kelamin" => $participant->gender,
-                "age" => $participant->age,
-                "birth_mother" => $participant->birth_mother,
-                "district" => $participant->district,
+                "umur" => $participant->age,
+                "ibu_kandung" => $participant->birth_mother,
+                "kota_atau_kabupaten" => $participant->district,
                 "tempat_tanggal_lahir" => $participant->birth_place . ', ' . $participant->birth_day,
                 "alamat_sesuai_ktp" => $participant->ktp_address,
                 "alamat_sekarang" => $participant->address,
             ];
         }
+        return collect($data);
+    }
 
-        return $this->collection($data);
+    public function headings(): array
+    {
+        return [
+            "ID",
+            "Nama",
+            "Email",
+            "Nomor Hp",
+            "NIK",
+            "Jumlah Hafalan",
+            "Pendidikan Sedang Ditempuh",
+            "Tingkat atau Kelas",
+            "Jenis Kelamin",
+            "Umur",
+            "Ibu Kandung",
+            "Kota / Kabupaten",
+            "Tempat Tanggal Lahir",
+            "Alamat Sesuai ktp",
+            "Alamat Sekarang",
+        ];
     }
 }

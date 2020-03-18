@@ -17,6 +17,15 @@ use Barryvdh\DomPDF\Facade as PDF;
 
 class AdminController extends Controller
 {
+    public function index(){
+        $user = DocumentModel::where('type', 1)->get();
+        return view('admin_home', compact('user'));
+    }
+    public function list(Request $request){
+        $type = $request->type;
+        $user = DocumentModel::where('type', $type)->get();
+        return view('admin_home', compact('user'));
+    }
     public function exportPemberdayaanToExcel(){
         return Excel::download(new ParticipantExport(), 'peserta-pemberdayaan.xlsx');
     }
@@ -34,7 +43,7 @@ class AdminController extends Controller
 
     public function printToPrinter($id){
         $participant = DocumentModel::where('user_id', $id)->join('users', 'users.id', 'documents.user_id')->first();
-        return view('print.participant_pdf', compact('participant'));
+        return view('print.participant_print', compact('participant'));
     }
 
 
