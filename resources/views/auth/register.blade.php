@@ -70,8 +70,8 @@
             </div>
         @else
             <div class="user-panel">
-                <a href="{{url('login')}}" class="login">Login</a>
-                <a href="{{url('register')}}" class="register">Create an account</a>
+                <a href="{{url('login')}}" class="login">Masuk</a>
+                <a href="{{url('register')}}" class="register">Buat Akun</a>
             </div>
         @endif
     </div>
@@ -81,8 +81,6 @@
         <li><a href="#">Pages</a>
             <ul class="sub-menu">
                 <li><a href="category.html">Category</a></li>
-                <li><a href="playlist.html">Playlist</a></li>
-                <li><a href="artist.html">Artist</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -96,7 +94,9 @@
 <div class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins">
     <div class="wrapper wrapper--w780">
         <div class="card card-3">
-            <div class="card-headings"></div>
+            <div class="card-headings" style="margin-top: 100px">
+                <span style="margin-top: 20px"><h5 align="center"><b style="margin-top: 20px">Membuat Akun</b></h5></span>
+            </div>
             <div class="card-body">
                 <h2 class="title">Buat Akun</h2>
                 @if(\Session::has('alert'))
@@ -112,41 +112,54 @@
                 <form action="{{ url('register-user') }}" method="post">
                     {{ csrf_field() }}
                     <div class="input-group">
-                        <input required="true" class="input--style-3" type="email" placeholder="Email" name="email">
+                        <input required="true" class="form-control" type="email" placeholder="Email" name="email">
                     </div>
                     <div class="input-group">
-                        <input required="true" class="input--style-3" type="password" placeholder="Password" name="password" id="txtPassword">
+                        <input required="true" class="form-control" type="password" placeholder="Password" name="password" id="txtPassword">
                     </div>
                     <div class="input-group">
-                        <input required="true" class="input--style-3" type="password" placeholder="Konfirmasi Password" name="confirmation" id="txtConfirmPassword">
+                        <input required="true" class="form-control" type="password" placeholder="Konfirmasi Password" name="confirmation" id="txtConfirmPassword">
                     </div>
                     <div class="input-group">
-                        <input required="true" class="input--style-3" type="text" placeholder="Nama" name="name">
+                        <input required="true" class="form-control" type="text" placeholder="Nama Lengkap" name="name">
                     </div>
                     <div class="input-group">
                         <div class="rs-select2 js-select-simple select--no-search">
+                            <label class="form-group">Jenis Kelamin : </label>
                             <select name="gender">
-                                <option disabled="disabled" selected="selected">Gender</option>
-                                <option>Male</option>
-                                <option>Female</option>
+                                <option value="Laki-laki">Laki-laki</option>
+                                <option value="Perempuan">Perempuan</option>
                             </select>
                             <div class="select-dropdown"></div>
                         </div>
                     </div>
                     <div class="input-group">
-                        <input required="true" class="input--style-3" type="number" placeholder="Phone" name="phone">
+                        <input required="true" class="form-control" type="number" placeholder="Nomor Hp" name="phone">
                     </div>
                     <div class="input-group">
-                        <input required="true" class="input--style-3" type="text" placeholder="Tempat Lahir" name="birth_place">
+                        <input required="true" class="form-control" type="text" placeholder="Tempat Lahir" name="birth_place">
                     </div>
                     <div class="input-group">
-                        <input required="true" class="input--style-3" type="date" placeholder="Tanggal Lahir" name="birth_day">
+                        <label class="form-group">Tanggal Lahir : </label>
+                        <input required="true" class="form-control" type="date" placeholder="Tanggal Lahir" name="birth_day">
                     </div>
                     <div class="input-group">
-                        <input required="true" class="input--style-3" type="text" placeholder="Alamat" name="address">
+                        <input required="true" class="form-control" type="number" placeholder="Usia" name="age">
+                    </div>
+                    <div class="input-group">
+                        <input required="true" class="form-control" type="text" placeholder="Ibu Kandung" name="birth_mother">
+                    </div>
+                    <div class="input-group">
+                        <input required="true" class="form-control" type="text" placeholder="Kota / Kabupaten" name="district">
+                    </div>
+                    <div class="input-group">
+                        <input required="true" class="form-control" type="text" placeholder="Alamat sesuai KTP" name="ktp_address">
+                    </div>
+                    <div class="input-group">
+                        <input required="true" class="form-control" type="text" placeholder="Alamat Sekarang" name="address">
                     </div>
                     <div class="p-t-10">
-                        <button class="btn btn--pill btn--green" type="submit" id="btnSubmit">Daftar</button>
+                        <button class="btn btn--pill btn--green" type="submit" id="btnSubmit">Buat Akun</button>
                     </div>
                 </form>
             </div>

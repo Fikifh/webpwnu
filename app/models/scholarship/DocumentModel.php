@@ -10,6 +10,7 @@ class DocumentModel extends Model
     protected $fillable = [
         'type',
         'nik',
+        'kk',
         'education',
         'jumlah_hafalan',
         'user_id',
@@ -23,6 +24,8 @@ class DocumentModel extends Model
         'syahadah',
         'cv',
         'foto',
+        'school_name',
+        'school_class'
     ];
     protected $table = 'documents';
 

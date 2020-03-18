@@ -24,12 +24,14 @@ class Document extends Migration
             $table->string('ijazah');
             $table->string('surdes');
             $table->string('suror');
-            $table->string('bukti_hafalan');
+            $table->string('bukti_hafalan')->nullable();;
             $table->string('skck');
-            $table->string('sur_ket_hafalan');
-            $table->string('syahadah');
+            $table->string('sur_ket_hafalan')->nullable();;
+            $table->string('syahadah')->nullable();;
             $table->string('cv');
             $table->string('foto');
+            $table->string('school_name')->nullable();
+            $table->integer('school_class')->nullable();
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });

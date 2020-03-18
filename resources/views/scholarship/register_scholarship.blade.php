@@ -128,8 +128,9 @@
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                     <h3 class="register-heading">Daftar Pemberdayaan</h3>
                     {{--                    <div class="row register-form">--}}
-                    <form class="row register-form col-lg-12" method="POST" action="{{url('register-scholarship')}}"
+                    <form class="row register-form col-lg-12" method="POST" action="{{url('register-empowerment')}}"
                           enctype="multipart/form-data">
+                        <input class="form-control" hidden="true" type="text" name="id" value="{{$user->id}}">
                         {{csrf_field()}}
                         <div class="col-md-6">
                             <div class="form-group">
@@ -185,6 +186,11 @@
                                 <label class="form-control-file font-weight-bold">Scan Bukti Hafalan (Syahadah)</label>
                                 <input required class="form-control-file" type="file"
                                        placeholder="Scan Bukti Hafalan (Syahadah)" name="bukti_hafalan">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-control-file font-weight-bold">Scan SKCK</label>
+                                <input required class="form-control-file" type="file"
+                                       placeholder="Scan Bukti Hafalan (Syahadah)" name="skck">
                             </div>
                             <div class="form-group">
                                 <label class="form-control-file font-weight-bold">Scan Curriculum Vitae (CV)</label>
@@ -206,6 +212,7 @@
                     {{--                    <div class="row register-form">--}}
                     <form class="row register-form col-lg-12" method="POST" action="{{url('register-scholarship')}}"
                           enctype="multipart/form-data">
+                        <input class="form-control" hidden="true" type="text" name="id" value="{{$user->id}}">
                         {{csrf_field()}}
                         <div class="col-md-6">
                             <div class="form-group">
@@ -217,10 +224,11 @@
                                        placeholder="Nomor Induk Kependudukan (NIK)">
                             </div>
                             <div class="form-group">
-                                <label class="form-control-file font-weight-bold">Pilih Pendidikan</label>
-                                <select class="form-control" name="education">
-                                    <option value="Terakhir (Pemberdayaan)">Terakhir (Pemberdayaan)</option>
-                                </select>
+                                <label class="form-control-file font-weight-bold">Pendidikan yang sedang Ditempuh</label>
+                                <input required class="form-control" type="text" name="school_name"
+                                       placeholder="Nama Sekolah / Pondok Pesantren">
+                                <input minlength="1" maxlength="12" required class="form-control" type="number" name="school_class"
+                                       placeholder="Tingkan / Kelas (Angka)">
                             </div>
                             <div class="form-group">
                                 <label class="form-control-file font-weight-bold">Jumlah Hafalan</label>
@@ -258,9 +266,14 @@
                                        placeholder="Scan Surat Rekomendasi Ormas" name="suror">
                             </div>
                             <div class="form-group">
-                                <label class="form-control-file font-weight-bold">Scan Bukti Hafalan (Syahadah)</label>
+                                <label class="form-control-file font-weight-bold">Scan Surat Keterangan Jumlah Hafalan</label>
                                 <input required class="form-control-file" type="file"
-                                       placeholder="Scan Bukti Hafalan (Syahadah)" name="bukti_hafalan">
+                                       placeholder="Scan Surat Keterangan Jumlah Hafalan" name="sur_ket_hafalan">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-control-file font-weight-bold">Scan SKCK</label>
+                                <input required class="form-control-file" type="file"
+                                       placeholder="Scan Bukti Hafalan (Syahadah)" name="skck">
                             </div>
                             <div class="form-group">
                                 <label class="form-control-file font-weight-bold">Scan Curriculum Vitae (CV)</label>

@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="_token" content="{{ csrf_token() }}">
     <title>AdminPWNU | Dashboard</title>
+    <!--bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Font Awesome -->
@@ -782,22 +785,22 @@
                                 <i class="fas fa-file-download"></i></a>
                         </div>
                     </div>
-                    {{--          <!-- ./col -->--}}
-                    {{--          <div class="col-lg-3 col-6">--}}
-                    {{--            <!-- small box -->--}}
-                    {{--            <div class="small-box bg-danger">--}}
-                    {{--              <div class="inner">--}}
-                    {{--                <h3>65</h3>--}}
+                              <!-- ./col -->
+                              <div class="col-lg-3 col-6">
+                                <!-- small box -->
+                                <div class="small-box bg-danger">
+                                  <div class="inner">
+                                    <h3>65</h3>
 
-                    {{--                <p>Unique Visitors</p>--}}
-                    {{--              </div>--}}
-                    {{--              <div class="icon">--}}
-                    {{--                <i class="ion ion-pie-graph"></i>--}}
-                    {{--              </div>--}}
-                    {{--              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>--}}
-                    {{--            </div>--}}
-                    {{--          </div>--}}
-                    {{--          <!-- ./col -->--}}
+                                    <p>Unique Visitors</p>
+                                  </div>
+                                  <div class="icon">
+                                    <i class="ion ion-pie-graph"></i>
+                                  </div>
+                                  <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                                </div>
+                              </div>
+                              <!-- ./col -->
                 </div>
                 <!-- /.row -->
                 <!-- Main row -->
@@ -840,6 +843,12 @@
                                     </a>
                                     <a href="{{url('admin/download-zip/'.$userData->user_id.'/'.$userTable->name)}}">
                                         <button alt="Download  File" class="fa fa-download fa-circle bg-white"></button>
+                                    </a>
+                                    <a href="{{url('admin/print-to-pdf/'.$userData->user_id)}}">
+                                        <button alt="Print to PDF File" class="fa fa-print"></button>
+                                    </a>
+                                    <a href="{{url('admin/export-to-excel/'.$userData->user_id)}}">
+                                        <button alt="Export to Excel File" class="fa fa-file-export"></button>
                                     </a>
                                 </td>
                             </tr>

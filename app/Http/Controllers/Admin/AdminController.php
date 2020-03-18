@@ -5,18 +5,21 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\models\scholarship\DocumentModel;
 use App\User;
-use Barryvdh\DomPDF\PDF;
+
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use ZipArchive;
 use File;
+use Barryvdh\DomPDF\Facade as PDF;
 
 class AdminController extends Controller
 {
     public function printToPdf($id){
-        $data = DocumentModel::where('user_id', 4)->join('users', 'users.id', 'documents.user_id')->first();
-        return $data;
-        $pdf = PDF::loadView('participant_pdf', ['participant' => $participant]);
+        $participant = DocumentModel::where('user_id', 4)->join('users', 'users.id', 'documents.user_id')->first();
+//        return view('print.participant_pdf', compact('participant'));
+        $pdf = PDF::loadView('print.participant_pdf', ['participant' => $participant]);
+        $pdf->setPaper('A4', 'portrait');
+//        return $pdf->stream();
         return $pdf->download($id.'-'.$participant->name);
     }
 
@@ -28,11 +31,19 @@ class AdminController extends Controller
     }
 
     public function downloadZip($id, $name){
+        $document = DocumentModel::where('user_id', $id)->first();
+        $type = '';
+        if($document->type == 1){
+            $type = 'pemberdayaan';
+        } else {
+            $type = 'beasiswa';
+        }
+
         $zip_file = Carbon::now()->toDateString().'-'.$id.'-'.$name;
         $zip = new \ZipArchive();
         $zip->open($zip_file, \ZipArchive::CREATE | \ZipArchive::OVERWRITE);
 
-        $path = public_path('dokumenuser/'.$id);
+        $path = public_path('dokumenuser/'.$type.'/'.$id);
         $files = new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator($path));
         foreach ($files as $name => $file)
         {
@@ -41,7 +52,7 @@ class AdminController extends Controller
                 $filePath     = $file->getRealPath();
 
                 // extracting filename with substr/strlen
-                $relativePath = 'dokumenuser/'. substr($filePath, strlen($path) + 1);
+                $relativePath = 'dokumenuser/'.$type.'/'. substr($filePath, strlen($path) + 1);
 
                 $zip->addFile($filePath, $relativePath);
             }

@@ -30,11 +30,14 @@ Route::get('register', function () {
 Route::post('register-user', 'User\UserController@registerPost');
 
 Route::get('register-scholarship', 'Scholarship\ScholarshipController@getRegisterScholarship');
+Route::post('register-empowerment', 'Scholarship\ScholarshipController@registerEmpowermentPost');
 Route::post('register-scholarship', 'Scholarship\ScholarshipController@registerScholarshipPost');
 
 Route::get('test', 'Scholarship\ScholarshipController@test');
 
-
+Route::get('participant-print', function(){
+    return view('print.participant_pdf');
+});
 
 
 Route::get('search', 'Admin\AdminController@search');

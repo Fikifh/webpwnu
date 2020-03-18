@@ -80,6 +80,10 @@ class UserController extends Controller
         $user->birth_day = $request->birth_day;
         $user->address = $request->address;
         $user->roles_id = 1;
+        $user->age = $request->age;
+        $user->birth_mother = $request->birth_mother;
+        $user->district = $request->district;
+        $user->ktp_address = $request->ktp_address;
         $user->save();
         return redirect('login')->with('alert-success', 'Berhasil Mendaftar');
     }

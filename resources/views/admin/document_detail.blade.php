@@ -11,17 +11,21 @@
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Tempusdominus Bbootstrap 4 -->
-    <link rel="stylesheet" href="{{ asset("/bower_components/admin-lte/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css") }}">
+    <link rel="stylesheet"
+          href="{{ asset("/bower_components/admin-lte/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css") }}">
     <!-- iCheck -->
-    <link rel="stylesheet" href="{{ asset("/bower_components/admin-lte/plugins/icheck-bootstrap/icheck-bootstrap.min.css") }}">
+    <link rel="stylesheet"
+          href="{{ asset("/bower_components/admin-lte/plugins/icheck-bootstrap/icheck-bootstrap.min.css") }}">
     <!-- JQVMap -->
     <link rel="stylesheet" href="{{ asset("/bower_components/admin-lte/plugins/jqvmap/jqvmap.min.css") }}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset("/bower_components/admin-lte/dist/css/adminlte.min.css") }}">
     <!-- overlayScrollbars -->
-    <link rel="stylesheet" href="{{ asset("/bower_components/admin-lte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css") }}">
+    <link rel="stylesheet"
+          href="{{ asset("/bower_components/admin-lte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css") }}">
     <!-- Daterange picker -->
-    <link rel="stylesheet" href="{{ asset("/bower_components/admin-lte/plugins/daterangepicker/daterangepicker.css") }}">
+    <link rel="stylesheet"
+          href="{{ asset("/bower_components/admin-lte/plugins/daterangepicker/daterangepicker.css") }}">
     <!-- summernote -->
     <link rel="stylesheet" href="{{ asset("/bower_components/admin-lte/plugins/summernote/summernote-bs4.css") }}">
     <!-- Google Font: Source Sans Pro -->
@@ -151,7 +155,8 @@
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
         <a href="{{url('admin')}}" class="brand-link">
-            <img src="{{ asset("/bower_components/landing-page/img/pwnulogo.jpg") }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+            <img src="{{ asset("/bower_components/landing-page/img/pwnulogo.jpg") }}" alt="AdminLTE Logo"
+                 class="brand-image img-circle elevation-3"
                  style="opacity: .8">
             <span class="brand-text font-weight-light">Admin PWNU</span>
         </a>
@@ -161,7 +166,8 @@
             <!-- Sidebar user panel (optional) -->
             <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                 <div class="image">
-                    <img src="{{ asset("/bower_components/admin-lte/dist/img/user2-160x160.jpg") }}" class="img-circle elevation-2" alt="User Image">
+                    <img src="{{ asset("/bower_components/admin-lte/dist/img/user2-160x160.jpg") }}"
+                         class="img-circle elevation-2" alt="User Image">
                 </div>
                 <div class="info">
                     <a href="#" class="d-block">{{session('name')}}</a>
@@ -170,7 +176,8 @@
 
             <!-- Sidebar Menu -->
             <nav class="mt-2">
-                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                    data-accordion="false">
                     <!-- Add icons to the links using the .nav-icon class
                          with font-awesome or any other icon font library -->
                     <li class="nav-item has-treeview menu-open">
@@ -796,32 +803,117 @@
                     <input type="text" hidden="true" value="{{$user = \App\models\scholarship\DocumentModel::all()}}">
                     <!-- Table -->
                     <table class="table table-bordered">
-                        <thead>
-                        <tr>
-                            <th>KTP</th>
-                            <th>Surat Ket. Desa</th>
-                            <th>Surat Ket. Ormas</th>
-                            <th>Bukti Hafalan</th>
-                            <th>SKCK</th>
-                            <th>Surat Ket. Hafalan</th>
-                            <th>Syahadah</th>
-                            <th>CV</th>
-                            <th>Foto</th>
-                        </tr>
-                        </thead>
-                        <tbody>
+
+                        @if($userData->type == 1)
+                            <thead>
                             <tr>
-                                <td><a href="{{response()->download(public_path(). "/dokumenuser/".$userData->user_id."/ktp/".$userData->ktp) }}"><img src="{{asset("/dokumenuser/".$userData->user_id."/ktp/".$userData->ktp) }}" class="thumbnail-detail"/></a></td>
-                                <td><a href="{{response()->download(public_path(). "/dokumenuser/".$userData->user_id."/surdes/"."/".$userData->surdes) }}"><img src="{{asset("/dokumenuser/".$userData->user_id."/surdes/".$userData->surdes) }}" class="thumbnail-detail"/></a></td>
-                                <td><a href="{{response()->download(public_path(). "/dokumenuser/".$userData->user_id."/suror/".$userData->suror) }}"><img src="{{asset("/dokumenuser/".$userData->user_id."/suror/".$userData->suror) }}" class="thumbnail-detail"/></a></td>
-                                <td><a href="{{response()->download(public_path(). "/dokumenuser/".$userData->user_id."/bukti_hafalan/".$userData->bukti_hafalan) }}"><img src="{{asset("/dokumenuser/".$userData->user_id."/bukti_hafalan/".$userData->bukti_hafalan) }}" class="thumbnail-detail"/></a></td>
-                                <td><a href="{{response()->download(public_path(). "/dokumenuser/".$userData->user_id."/skck/".$userData->skck) }}"><img src="{{asset("/dokumenuser/".$userData->user_id."/skck/".$userData->skck) }}" class="thumbnail-detail"/></a></td>
-                                <td><a href="{{response()->download(public_path(). "/dokumenuser/".$userData->user_id."/sur_ket_hafalan/".$userData->sur_ket_hafalan) }}"><img src="{{asset("/dokumenuser/".$userData->user_id."/sur_ket_hafalan/".$userData->sur_ket_hafalan) }}" class="thumbnail-detail"/></a></td>
-                                <td><a href="{{response()->download(public_path(). "/dokumenuser/".$userData->user_id."/syahadah/".$userData->syahadah) }}"><img src="{{asset("/dokumenuser/".$userData->user_id."/syahadah/".$userData->syahadah) }}" class="thumbnail-detail"/></a></td>
-                                <td><a href="{{response()->download(public_path(). "/dokumenuser/".$userData->user_id."/cv/".$userData->cv) }}"><img src="{{asset("/dokumenuser/".$userData->user_id."/cv/".$userData->cv) }}" class="thumbnail-detail"/></a></td>
-                                <td><a href="{{response()->download(public_path(). "/dokumenuser/".$userData->user_id."/foto/".$userData->foto) }}"><img src="{{asset("/dokumenuser/".$userData->user_id."/foto/".$userData->foto) }}" class="thumbnail-detail"/></a></td>
+                                <th>KTP</th>
+                                <th>Surat Ket. Desa</th>
+                                <th>Surat Ket. Ormas</th>
+                                <th>Bukti Hafalan</th>
+                                <th>SKCK</th>
+                                <th>CV</th>
+                                <th>Foto</th>
+                                <th>Kartu Keluarga</th>
+                                <th>Ijazah</th>
                             </tr>
-                        </tbody>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <a href="{{response()->download(public_path(). "/dokumenuser/pemberdayaan/".$userData->user_id."/ktp/".$userData->ktp) }}"><img
+                                            src="{{asset("/dokumenuser/pemberdayaan/".$userData->user_id."/ktp/".$userData->ktp) }}"
+                                            class="thumbnail-detail"/></a></td>
+                                <td>
+                                    <a href="{{response()->download(public_path(). "/dokumenuser/pemberdayaan/".$userData->user_id."/surdes/"."/".$userData->surdes) }}"><img
+                                            src="{{asset("/dokumenuser/pemberdayaan/".$userData->user_id."/surdes/".$userData->surdes) }}"
+                                            class="thumbnail-detail"/></a></td>
+                                <td>
+                                    <a href="{{response()->download(public_path(). "/dokumenuser/pemberdayaan/".$userData->user_id."/suror/".$userData->suror) }}"><img
+                                            src="{{asset("/dokumenuser/pemberdayaan/".$userData->user_id."/suror/".$userData->suror) }}"
+                                            class="thumbnail-detail"/></a></td>
+                                <td>
+                                    <a href="{{response()->download(public_path(). "/dokumenuser/pemberdayaan/".$userData->user_id."/bukti_hafalan/".$userData->bukti_hafalan) }}"><img
+                                            src="{{asset("/dokumenuser/pemberdayaan/".$userData->user_id."/bukti_hafalan/".$userData->bukti_hafalan) }}"
+                                            class="thumbnail-detail"/></a></td>
+                                <td>
+                                    <a href="{{response()->download(public_path(). "/dokumenuser/pemberdayaan/".$userData->user_id."/skck/".$userData->skck) }}"><img
+                                            src="{{asset("/dokumenuser/pemberdayaan/".$userData->user_id."/skck/".$userData->skck) }}"
+                                            class="thumbnail-detail"/></a></td>
+                                <td>
+                                    <a href="{{response()->download(public_path(). "/dokumenuser/pemberdayaan/".$userData->user_id."/cv/".$userData->cv) }}"><img
+                                            src="{{asset("/dokumenuser/pemberdayaan/".$userData->user_id."/cv/".$userData->cv) }}"
+                                            class="thumbnail-detail"/></a></td>
+                                <td>
+                                    <a href="{{response()->download(public_path(). "/dokumenuser/pemberdayaan/".$userData->user_id."/foto/".$userData->foto) }}"><img
+                                            src="{{asset("/dokumenuser/pemberdayaan/".$userData->user_id."/foto/".$userData->foto) }}"
+                                            class="thumbnail-detail"/></a></td>
+                                <td>
+                                    <a href="{{response()->download(public_path(). "/dokumenuser/pemberdayaan/".$userData->user_id."/kartu-keluarga/".$userData->kk) }}"><img
+                                            src="{{asset("/dokumenuser/pemberdayaan/".$userData->user_id."/kartu-keluarga/".$userData->kk) }}"
+                                            class="thumbnail-detail"/></a></td>
+                                <td>
+                                    <a href="{{response()->download(public_path(). "/dokumenuser/pemberdayaan/".$userData->user_id."/ijazah/".$userData->ijazah) }}"><img
+                                            src="{{asset("/dokumenuser/pemberdayaan/".$userData->user_id."/ijazah/".$userData->ijazah) }}"
+                                            class="thumbnail-detail"/></a></td>
+                            </tr>
+                            </tbody>
+                        @else
+                            <thead>
+                            <tr>
+                                <th>KTP</th>
+                                <th>Surat Ket. Desa</th>
+                                <th>Surat Ket. Ormas</th>
+                                <th>Surat Ket. Jumlah Hafalan</th>
+                                <th>SKCK</th>
+                                <th>CV</th>
+                                <th>Foto</th>
+                                <th>Kartu Keluarga</th>
+                                <th>Ijazah</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+
+                                <td>
+                                    <a href="{{response()->download(public_path(). "/dokumenuser/beasiswa/".$userData->user_id."/ktp/".$userData->ktp) }}"><img
+                                            src="{{asset("/dokumenuser/beasiswa/".$userData->user_id."/ktp/".$userData->ktp) }}"
+                                            class="thumbnail-detail"/></a></td>
+                                <td>
+                                    <a href="{{response()->download(public_path(). "/dokumenuser/beasiswa/".$userData->user_id."/surdes/"."/".$userData->surdes) }}"><img
+                                            src="{{asset("/dokumenuser/beasiswa/".$userData->user_id."/surdes/".$userData->surdes) }}"
+                                            class="thumbnail-detail"/></a></td>
+                                <td>
+                                    <a href="{{response()->download(public_path(). "/dokumenuser/beasiswa/".$userData->user_id."/suror/".$userData->suror) }}"><img
+                                            src="{{asset("/dokumenuser/beasiswa/".$userData->user_id."/suror/".$userData->suror) }}"
+                                            class="thumbnail-detail"/></a></td>
+                                <td>
+                                    <a href="{{response()->download(public_path(). "/dokumenuser/beasiswa/".$userData->user_id."/sur-ket-hafalan/".$userData->bukti_hafalan) }}"><img
+                                            src="{{asset("/dokumenuser/beasiswa/".$userData->user_id."/sur-ket-hafalan/".$userData->bukti_hafalan) }}"
+                                            class="thumbnail-detail"/></a></td>
+                                <td>
+                                    <a href="{{response()->download(public_path(). "/dokumenuser/beasiswa/".$userData->user_id."/skck/".$userData->skck) }}"><img
+                                            src="{{asset("/dokumenuser/beasiswa/".$userData->user_id."/skck/".$userData->skck) }}"
+                                            class="thumbnail-detail"/></a></td>
+                                <td>
+                                    <a href="{{response()->download(public_path(). "/dokumenuser/beasiswa/".$userData->user_id."/cv/".$userData->cv) }}"><img
+                                            src="{{asset("/dokumenuser/beasiswa/".$userData->user_id."/cv/".$userData->cv) }}"
+                                            class="thumbnail-detail"/></a></td>
+                                <td>
+                                    <a href="{{response()->download(public_path(). "/dokumenuser/beasiswa/".$userData->user_id."/foto/".$userData->foto) }}"><img
+                                            src="{{asset("/dokumenuser/beasiswa/".$userData->user_id."/foto/".$userData->foto) }}"
+                                            class="thumbnail-detail"/></a></td>
+                                <td>
+                                    <a href="{{response()->download(public_path(). "/dokumenuser/beasiswa/".$userData->user_id."/kartu-keluarga/".$userData->kk) }}"><img
+                                            src="{{asset("/dokumenuser/beasiswa/".$userData->user_id."/kartu-keluarga/".$userData->kk) }}"
+                                            class="thumbnail-detail"/></a></td>
+                                <td>
+                                    <a href="{{response()->download(public_path(). "/dokumenuser/beasiswa/".$userData->user_id."/ijazah/".$userData->ijazah) }}"><img
+                                            src="{{asset("/dokumenuser/beasiswa/".$userData->user_id."/ijazah/".$userData->ijazah) }}"
+                                            class="thumbnail-detail"/></a></td>
+                            </tr>
+                            </tbody>
+                        @endif
                     </table>
                     <!-- End Table -->
 
@@ -1387,11 +1479,13 @@
 <script src="{{ asset("/bower_components/admin-lte/plugins/moment/moment.min.js") }}"></script>
 <script src="{{ asset("/bower_components/admin-lte/plugins/daterangepicker/daterangepicker.js") }}"></script>
 <!-- Tempusdominus Bootstrap 4 -->
-<script src="{{ asset("/bower_components/admin-lte/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js") }}"></script>
+<script
+    src="{{ asset("/bower_components/admin-lte/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js") }}"></script>
 <!-- Summernote -->
 <script src="{{ asset("/bower_components/admin-lte/plugins/summernote/summernote-bs4.min.js") }}"></script>
 <!-- overlayScrollbars -->
-<script src="{{ asset("/bower_components/admin-lte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js") }}"></script>
+<script
+    src="{{ asset("/bower_components/admin-lte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js") }}"></script>
 <!-- AdminLTE App -->
 <script src="{{ asset("/bower_components/admin-lte/dist/js/adminlte.js") }}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
