@@ -11,6 +11,8 @@ class DocumentModel extends Model
         'type',
         'nik',
         'kk',
+        'school_name',
+        'school_class',
         'education',
         'jumlah_hafalan',
         'user_id',
@@ -24,8 +26,6 @@ class DocumentModel extends Model
         'syahadah',
         'cv',
         'foto',
-        'school_name',
-        'school_class'
     ];
     protected $table = 'documents';
 

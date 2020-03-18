@@ -154,7 +154,7 @@ class ScholarshipController extends Controller
         $bukti_hafalan = time()."-"."sur-ket-hafalan.".$bukti_hafalanFile->extension();
         $tujuan_bukti_hafalan = 'dokumenuser/beasiswa/'.$userId.'/sur-ket-hafalan';
         $bukti_hafalanFile->move($tujuan_bukti_hafalan, $bukti_hafalan);
-        $documet->bukti_hafalan = $bukti_hafalan;
+        $documet->sur_ket_hafalan = $bukti_hafalan;
 
 
         $skckFile = $request->file('skck');

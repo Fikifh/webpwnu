@@ -51,6 +51,10 @@ Route::group(['prefix' => 'admin', 'namespace'=>'Admin', 'middleware'=> ['role:a
 
    //Print to PDF
     Route::get('print-to-pdf/{id}', 'AdminController@printToPdf');
+
+    //Export to Excel
+    Route::get('export-pemberdayaan-to-excel', 'AdminController@exportPemberdayaanToExcel');
+    Route::get('export-beasiswa-to-excel', 'AdminController@exportScholarshipToExcel');
 });
 
 //Route::get('/home', 'HomeController@index')->name('home');

@@ -2,24 +2,34 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Exports\ParticipantExport;
+use App\Exports\ParticipantSchoolarshipExport;
 use App\Http\Controllers\Controller;
 use App\models\scholarship\DocumentModel;
 use App\User;
 
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
 use ZipArchive;
 use File;
 use Barryvdh\DomPDF\Facade as PDF;
 
 class AdminController extends Controller
 {
+    public function exportPemberdayaanToExcel(){
+        return Excel::download(new ParticipantExport(), 'peserta-pemberdayaan.xlsx');
+    }
+    public function exportScholarshipToExcel(){
+        return Excel::download(new ParticipantSchoolarshipExport(), 'peserta-beasiswa.xlsx');
+    }
+
     public function printToPdf($id){
-        $participant = DocumentModel::where('user_id', 4)->join('users', 'users.id', 'documents.user_id')->first();
+        $participant = DocumentModel::where('user_id', $id)->join('users', 'users.id', 'documents.user_id')->first();
 //        return view('print.participant_pdf', compact('participant'));
-        $pdf = PDF::loadView('print.participant_pdf', ['participant' => $participant]);
-        $pdf->setPaper('A4', 'portrait');
-//        return $pdf->stream();
+        $customPaper = array(0, 0, 830, 1145);
+        $pdf = PDF::loadView('print.participant_pdf', ['participant' => $participant])->setPaper($customPaper, 'portrait');;
+        return $pdf->stream();
         return $pdf->download($id.'-'.$participant->name);
     }
 
