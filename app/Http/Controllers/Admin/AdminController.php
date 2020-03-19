@@ -26,6 +26,12 @@ class AdminController extends Controller
         $user = DocumentModel::where('type', $type)->get();
         return view('admin_home', compact('user'));
     }
+    public function search(Request $request){
+        $query = $request->search;
+        return $query;
+        $user = DocumentModel::where('name', 'like', '%'.$query.'%')->get();
+        return view('admin_home', compact('user'));
+    }
     public function exportPemberdayaanToExcel(){
         return Excel::download(new ParticipantExport(), 'peserta-pemberdayaan.xlsx');
     }
@@ -109,31 +115,31 @@ class AdminController extends Controller
         return response()->download($zip_file);
     }
 
-    public function search(Request $request)
-    {
-        if ($request->ajax()) {
-            $output = "";
-            $users = DocumentModel::join('users', 'user.id', 'documents.id')
-                ->where('users.name', 'LIKE', '%'.$request->search.'%')->get();
-            if ($users) {
-                foreach ($users as $key => $data) {
-                    $output =  '<tr>' .
-                        '<td>'.$data->id.'</td>'.
-                        '<td>'.$data->name.'</td>'.
-                        '<td>'.$data->nik.'</td>'.
-                        '<td>'.$data->email.'</td>'.
-                        '<td>'.$data->gender.'</td>'.
-                        '<td>'.$data->birth_place.', '.$data->birth_day.'</td>'.
-                        '<td>'.$data->address.'</td>'.
-                        '<td>'.$data->phone.'</td>'.
-                        '<td>'.$data->education.'</td>'.
-                        '<td>'.$data->jumlah_hafalan.'</td>';
-
-                }
-                return Response($output);
-            }
-        }
-    }
+//    public function search(Request $request)
+//    {
+//        if ($request->ajax()) {
+//            $output = "";
+//            $users = DocumentModel::join('users', 'user.id', 'documents.id')
+//                ->where('users.name', 'LIKE', '%'.$request->search.'%')->get();
+//            if ($users) {
+//                foreach ($users as $key => $data) {
+//                    $output =  '<tr>' .
+//                        '<td>'.$data->id.'</td>'.
+//                        '<td>'.$data->name.'</td>'.
+//                        '<td>'.$data->nik.'</td>'.
+//                        '<td>'.$data->email.'</td>'.
+//                        '<td>'.$data->gender.'</td>'.
+//                        '<td>'.$data->birth_place.', '.$data->birth_day.'</td>'.
+//                        '<td>'.$data->address.'</td>'.
+//                        '<td>'.$data->phone.'</td>'.
+//                        '<td>'.$data->education.'</td>'.
+//                        '<td>'.$data->jumlah_hafalan.'</td>';
+//
+//                }
+//                return Response($output);
+//            }
+//        }
+//    }
 }
 
 

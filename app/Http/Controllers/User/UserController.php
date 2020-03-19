@@ -43,7 +43,7 @@ class UserController extends Controller
                 $userRole = $role->roles($roleId);
                 if($userRole->role_name === 'admin'){
                     $user = DocumentModel::all();
-                    return url('admin');
+                    return redirect('admin');
                 }
                 return redirect('/')->with('alert-success', 'Berhasil Masuk');
             } else {

@@ -40,17 +40,14 @@ Route::get('participant-print', function(){
 });
 
 
-Route::get('search', 'Admin\AdminController@search');
 Route::group(['prefix' => 'admin', 'namespace'=>'Admin', 'middleware'=> ['role:admin']], function (){
-   Route::get('/', function (){
-      return view('admin_home');
-   });
+
    Route::get('/', 'AdminController@index')->name('admin');
-    Route::get('list', 'AdminController@list')->name('list');
+   Route::get('list', 'AdminController@list')->name('list');
    Route::get('detail/{id}', 'AdminController@detailUser');
    Route::get('download-zip/{id}/{name}', 'AdminController@downloadZip');
    Route::get('download-all-files', 'AdminController@downloadall');
-
+   Route::get('search', 'AdminController@search');
    //Print to PDF
     Route::get('print-to-pdf/{id}', 'AdminController@printToPdf');
 

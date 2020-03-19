@@ -36,6 +36,16 @@
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+        function getType() {
+            var type = document.getElementById('type');
+            var opt =  type.options[type.selectedIndex];
+            return opt.value;
+        }
+        function setType(type){
+            document.getElementById("type").selectedIndex = ""+type+"";
+        }
+    </script>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -59,14 +69,11 @@
         <form class="form-inline ml-3">
             <div class="input-group input-group-sm">
                 <form method="GET" action="{{url('search')}}">
-                    <input class="form-control form-control-navbar" type="text" placeholder="Search" aria-label="Search"
+                    {{csrf_field()}}
+                    <input class="form-control form-control-navbar" type="text" placeholder="Cari" aria-label="Search"
                            id="search" name="search">
-                    <div class="input-group-append">
-                        <a href="{{url('search')}}">
-                            <button class="btn btn-navbar" type="submit">
-                                <i class="fas fa-search"></i>
-                            </button>
-                        </a>
+                    <div class="form-control form-control-navbar input-group-append">
+                        <input type="submit" class="fa fa-filter" value="Cari">
                     </div>
                 </form>
             </div>
@@ -1452,20 +1459,20 @@
 <script src="{{ asset("/bower_components/admin-lte/dist/js/demo.js") }}"></script>
 
 
-<!-- untuk live search -->
-<script type="text/javascript">
-    $('#search').on('keyup', function () {
-        $value = $(this).val();
-        $.ajax({
-            type: 'get',
-            url: '{{url('search')}}',
-            data: {'search': $value},
-            success: function (data) {
-                $('tbody').html(data);
-            }
-        });
-    })
-</script>
+{{--<!-- untuk live search -->--}}
+{{--<script type="text/javascript">--}}
+{{--    $('#search').on('keyup', function () {--}}
+{{--        $value = $(this).val();--}}
+{{--        $.ajax({--}}
+{{--            type: 'get',--}}
+{{--            url: '{{url('search')}}',--}}
+{{--            data: {'search': $value},--}}
+{{--            success: function (data) {--}}
+{{--                $('tbody').html(data);--}}
+{{--            }--}}
+{{--        });--}}
+{{--    })--}}
+{{--</script>--}}
 <script type="text/javascript">
     $.ajaxSetup({headers: {'csrftoken': '{{ csrf_token() }}'}});
 </script>
