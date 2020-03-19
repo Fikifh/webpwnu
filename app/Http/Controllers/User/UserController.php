@@ -71,6 +71,7 @@ class UserController extends Controller
             'confirmation' => 'required|same:password'
         ]);
 
+
         $user = new User();
         $user->email = $request->email;
         $user->password = bcrypt($request->password);
