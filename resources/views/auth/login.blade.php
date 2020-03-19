@@ -10,7 +10,7 @@
     <meta name="keywords" content="Colorlib Templates">
 
     <!-- Title Page-->
-    <title>Login</title>
+    <title>Masuk</title>
 
     <!-- Icons font CSS-->
     <link href="{{ asset("/bower_components/colorlib-regform/vendor/mdi-font/css/material-design-iconic-font.min.css") }}" rel="stylesheet" media="all">
@@ -67,12 +67,12 @@
         @if(\Illuminate\Support\Facades\Auth::user())
             <div class="user-panel">
                 <a href="" class="login">{{\Illuminate\Support\Facades\Session::get('name')}}</a>
-                <a href="{{url('logout')}}">Logout</a>
+                <a href="{{url('logout')}}">Keluar</a>
             </div>
         @else
             <div class="user-panel">
-                <a href="{{url('login')}}" class="login">Login</a>
-                <a href="{{url('register')}}" class="register">Create an account</a>
+                <a href="{{url('login')}}" class="login">Masuk</a>
+                <a href="{{url('register')}}" class="register">Buat Akun</a>
             </div>
         @endif
     </div>
@@ -82,8 +82,6 @@
         <li><a href="#">Pages</a>
             <ul class="sub-menu">
                 <li><a href="">Category</a></li>
-                <li><a href="">Playlist</a></li>
-                <li><a href="">Artist</a></li>
                 <li><a href="">Blog</a></li>
                 <li><a href="">Contact</a></li>
             </ul>
@@ -119,7 +117,7 @@
                         <input class="input--style-3" type="password" placeholder="Password" name="password">
                     </div>
                     <div class="p-t-10">
-                        <button class="btn btn--pill btn--green" type="submit">Login</button>
+                        <button class="btn btn--pill btn--green" type="submit">Masuk</button>
                     </div>
                 </form>
             </div>

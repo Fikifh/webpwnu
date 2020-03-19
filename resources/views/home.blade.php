@@ -3,7 +3,7 @@
 <head>
     <title>Sadesha Provinsi Jawa Barat</title>
     <meta charset="UTF-8">
-    <meta name="description" content="Website Pendaftaran Beasiswa dan Pemberdayaan Sadesha PWNU Jawa Barat">
+    <meta name="description" content="Website Pendaftaran Beasiswa dan Pemberdayaan Sadesha Jawa Barat">
     <meta name="keywords" content="sadesha, pwnu, nu, nahdatul ulama, nkri">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -341,7 +341,7 @@
             <div class="col-xl-6 col-lg-5 order-lg-1">
                 <img id="footer-logo" src="{{ asset("/bower_components/landing-page/img/pwnulogo.jpg") }}" alt="">
                 <div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | PWNU
+                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | SADESHA
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
                 <div class="social-links">
                     <a href=""><i class="fa fa-instagram"></i></a>

@@ -66,7 +66,7 @@
         @if(\Illuminate\Support\Facades\Auth::user())
             <div class="user-panel">
                 <a href="" class="login">{{\Illuminate\Support\Facades\Session::get('name')}}</a>
-                <a href="{{url('logout')}}">Logout</a>
+                <a href="{{url('logout')}}">Keluar</a>
             </div>
         @else
             <div class="user-panel">
