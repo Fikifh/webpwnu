@@ -28,8 +28,7 @@ class AdminController extends Controller
     }
     public function search(Request $request){
         $query = $request->search;
-        return $query;
-        $user = DocumentModel::where('name', 'like', '%'.$query.'%')->get();
+        $user = DocumentModel::join('users', 'documents.user_id', 'users.id')->where('users.name', 'like', '%'.$query.'%')->get();
         return view('admin_home', compact('user'));
     }
     public function exportPemberdayaanToExcel(){

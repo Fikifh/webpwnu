@@ -66,16 +66,15 @@
         </ul>
 
         <!-- SEARCH FORM -->
-        <form class="form-inline ml-3">
+        <form method="GET" action="{{url('admin/search')}}" class="form-inline ml-3">
+            {{csrf_field()}}
             <div class="input-group input-group-sm">
-                <form method="GET" action="{{url('search')}}">
-                    {{csrf_field()}}
-                    <input class="form-control form-control-navbar" type="text" placeholder="Cari" aria-label="Search"
-                           id="search" name="search">
-                    <div class="form-control form-control-navbar input-group-append">
-                        <input type="submit" class="fa fa-filter" value="Cari">
-                    </div>
-                </form>
+                <input name="search" class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+                <div class="input-group-append">
+                    <button class="btn btn-navbar" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
             </div>
         </form>
 
