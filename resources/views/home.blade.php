@@ -104,7 +104,7 @@
                     <div class="col-lg-6">
                         <div class="hs-text">
                             <h2><span>Program </span> Beasiswa</h2>
-                            <p>Provinsi juara lahir batin melalui program Sadesha dengan menyediakan satu hafidz untuk satu desa di seluruh Jabar dan mewujudkan Jabar sebagai gerbang ahli sunnah wal jamaah. </p>
+                            <p>Provinsi juara lahir batin melalui program Sadesha dengan menyediakan satu hafidz untuk satu desa di seluruh Jabar.</p>
                             @if(\Illuminate\Support\Facades\Auth::user())
                                 @if(\App\models\scholarship\DocumentModel::where('user_id', session('id'))->first())
                                     <a href="#" class="site-btn">Anda Terdaftar</a>
@@ -135,7 +135,7 @@
                     <h2 align="center">Jabar Juara Lahir Batin</h2>
                 </div>
                 <div class="col-lg-12">
-                    <p align="center">Provinsi juara lahir batin melalui program Sadesha dengan menyediakan satu hafidz untuk satu desa di seluruh Jabar dan mewujudkan Jabar sebagai gerbang ahli sunnah wal jamaah.</p>
+                    <p align="center">Provinsi juara lahir batin melalui program Sadesha dengan menyediakan satu hafidz untuk satu desa di seluruh Jabar.</p>
                 </div>
             </div>
 {{--        </div>--}}
