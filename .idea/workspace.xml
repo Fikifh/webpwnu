@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cdeacd53-bcb3-4fdf-99dc-f298b5db0619" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin_home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin_home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -189,7 +186,12 @@
       <workItem from="1584347848815" duration="1257000" />
       <workItem from="1584449145751" duration="16417000" />
       <workItem from="1584495211453" duration="53421000" />
-      <workItem from="1584582633038" duration="2578000" />
+      <workItem from="1584582633038" duration="3494000" />
+      <workItem from="1584674343534" duration="1078000" />
+      <workItem from="1584841936504" duration="1710000" />
+      <workItem from="1584857305306" duration="1043000" />
+      <workItem from="1584861558733" duration="143000" />
+      <workItem from="1584862137010" duration="48000" />
     </task>
     <servers />
   </component>
@@ -218,16 +220,17 @@
       <screen x="0" y="26" width="1366" height="742" />
     </state>
     <state x="100" y="126" width="1166" height="542" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.26.1366.742@0.26.1366.742" timestamp="1584248589027" />
-    <state x="1024" y="0" width="663" height="768" key="find.popup" timestamp="1584542055903">
-      <screen x="1024" y="0" width="1366" height="768" />
+    <state x="0" y="26" width="663" height="742" key="find.popup" timestamp="1584842593753">
+      <screen x="0" y="26" width="1366" height="742" />
     </state>
     <state x="1024" y="0" width="663" height="768" key="find.popup/0.26.1024.742/1024.0.1366.768@1024.0.1366.768" timestamp="1584542055903" />
-    <state x="1257" y="0" width="898" height="766" key="search.everywhere.popup" timestamp="1584542071658">
-      <screen x="1024" y="0" width="1366" height="768" />
+    <state x="0" y="26" width="663" height="742" key="find.popup/0.26.1366.742@0.26.1366.742" timestamp="1584842593753" />
+    <state x="233" y="26" width="897" height="740" key="search.everywhere.popup" timestamp="1584585306649">
+      <screen x="0" y="26" width="1366" height="742" />
     </state>
     <state x="175" y="144" width="672" height="622" key="search.everywhere.popup/0.144.1024.624/1024.118.1366.768@0.144.1024.624" timestamp="1584130191171" />
     <state x="175" y="26" width="673" height="740" key="search.everywhere.popup/0.26.1024.742/1024.0.1366.768@0.26.1024.742" timestamp="1584502936205" />
     <state x="1257" y="0" width="898" height="766" key="search.everywhere.popup/0.26.1024.742/1024.0.1366.768@1024.0.1366.768" timestamp="1584542071658" />
-    <state x="233" y="26" width="897" height="740" key="search.everywhere.popup/0.26.1366.742@0.26.1366.742" timestamp="1584322266280" />
+    <state x="233" y="26" width="897" height="740" key="search.everywhere.popup/0.26.1366.742@0.26.1366.742" timestamp="1584585306649" />
   </component>
 </project>
