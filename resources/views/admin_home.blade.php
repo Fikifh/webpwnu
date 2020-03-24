@@ -828,13 +828,12 @@
                 <div class="row">
 {{--                    <input type="text" hidden="true" value="{{$user = \App\models\scholarship\DocumentModel::all()}}">--}}
                     <!-- Table -->
-                    <table class="table table-bordered">
+                    <table class="table table-responsive table-bordered table-striped" style="width:100%;">
                         <thead>
                         <tr>
                             <th>ID</th>
                             <th>Nama</th>
-                            <th>NIk</th>
-                            <th>Email</th>
+                            <th>NIK</th>
                             <th>Gender</th>
                             <th>TTL</th>
                             <th>Alamat</th>
@@ -852,7 +851,6 @@
                                 <td>{{$userTable->id}}</td>
                                 <td>{{$userTable->name}}</td>
                                 <td>{{$userTable->nik}}</td>
-                                <td>{{$userTable->email}}</td>
                                 <td>{{$userTable->gender}}</td>
                                 <td>{{$userTable->birth_place.', '.$userTable->birth_day}}</td>
                                 <td>{{$userTable->address}}</td>
@@ -864,18 +862,18 @@
                                 @endif
                                 <td>{{$userData->jumlah_hafalan}}</td>
                                 <td>
-                                    <a href="{{url('admin/detail/'.$userData->user_id)}}">
+                                    <a class="btn btn-info btn-sm" href="{{url('admin/detail/'.$userData->user_id)}}">
                                         <button alt="Lihat File" class="fa fa-eye fa-circle bg-white">Lihat</button>
                                     </a>
-                                    <a href="{{url('admin/download-zip/'.$userData->user_id.'/'.$userTable->name)}}">
+                                    <a class="btn btn-info btn-sm" href="{{url('admin/download-zip/'.$userData->user_id.'/'.$userTable->name)}}">
                                         <button alt="Download  File" class="fa fa-download fa-circle bg-white">Zip</button>
                                     </a>
-                                    <a href="{{url('admin/print-to-pdf/'.$userData->user_id)}}">
+                                    <a class="btn btn-info btn-sm" href="{{url('admin/print-to-pdf/'.$userData->user_id)}}">
                                         <button alt="Print to PDF File" class="fa fa-print">PDF</button>
                                     </a>
                                 </td>
                                 <td>
-                                    <a href="{{url('admin/print-to-printer/'.$userData->user_id)}}" target="_blank">
+                                    <a class="btn btn-info btn-sm" href="{{url('admin/print-to-printer/'.$userData->user_id)}}" target="_blank">
                                         <button alt="Lihat File" class="fa fa-print">Print</button>
                                     </a>
                                 </td>
