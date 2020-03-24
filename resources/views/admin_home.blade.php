@@ -851,13 +851,17 @@
                             <tr>
                                 <td>{{$userTable->id}}</td>
                                 <td>{{$userTable->name}}</td>
-                                <td>{{$userData->nik}}</td>
+                                <td>{{$userTable->nik}}</td>
                                 <td>{{$userTable->email}}</td>
                                 <td>{{$userTable->gender}}</td>
                                 <td>{{$userTable->birth_place.', '.$userTable->birth_day}}</td>
                                 <td>{{$userTable->address}}</td>
                                 <td>{{$userTable->phone}}</td>
+                                @if($userData->type = 1)
                                 <td>{{$userData->education}}</td>
+                                @else
+                                    <td>{{$userData->school_name}} / {{$userData->school_class}}</td>
+                                @endif
                                 <td>{{$userData->jumlah_hafalan}}</td>
                                 <td>
                                     <a href="{{url('admin/detail/'.$userData->user_id)}}">
