@@ -2,8 +2,89 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdeacd53-bcb3-4fdf-99dc-f298b5db0619" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Scholarship/ScholarshipController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Scholarship/ScholarshipController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000002_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000002_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_14_165359_document.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_14_165359_document.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bower_components/landing-page/img/nuconect.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/12/cv/1584534554-cv.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/12/foto/1584534554-foto.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/12/ijazah/1584534554-ijazah.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/12/kartu-keluarga/1584534554_kk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/12/ktp/1584534554_ktp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/12/skck/1584534554--skck.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/12/sur-ket-hafalan/1584534554-sur-ket-hafalan.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/12/surdes/1584534554-surdes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/12/suror/1584534554-suror.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/4/cv/1584513009-cv.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/4/cv/1584513175-cv.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/4/cv/1584513373-cv.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/4/cv/1584513522-cv.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/4/cv/1584513611-cv.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/4/foto/1584513009-foto.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/4/foto/1584513175-foto.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/4/foto/1584513373-foto.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/4/foto/1584513522-foto.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/4/foto/1584513611-foto.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/4/ijazah/1584513009-ijazah.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/4/ijazah/1584513175-ijazah.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/4/ijazah/1584513373-ijazah.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/4/ijazah/1584513522-ijazah.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/4/ijazah/1584513611-ijazah.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/4/kartu-keluarga/1584513009_kk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/4/kartu-keluarga/1584513175_kk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/4/kartu-keluarga/1584513373_kk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/4/kartu-keluarga/1584513522_kk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/4/kartu-keluarga/1584513611_kk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/4/ktp/1584513009_ktp.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/4/ktp/1584513175_ktp.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/4/ktp/1584513373_ktp.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/4/ktp/1584513522_ktp.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/4/ktp/1584513611_ktp.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/4/skck/1584513009--skck.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/4/skck/1584513175--skck.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/4/skck/1584513373--skck.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/4/skck/1584513522--skck.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/4/skck/1584513611--skck.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/4/sur-ket-hafalan/1584513009-sur-ket-hafalan.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/4/sur-ket-hafalan/1584513175-sur-ket-hafalan.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/4/sur-ket-hafalan/1584513373-sur-ket-hafalan.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/4/sur-ket-hafalan/1584513522-sur-ket-hafalan.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/4/sur-ket-hafalan/1584513611-sur-ket-hafalan.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/4/surdes/1584513009-surdes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/4/surdes/1584513175-surdes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/4/surdes/1584513373-surdes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/4/surdes/1584513522-surdes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/4/surdes/1584513611-surdes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/4/suror/1584513009-suror.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/4/suror/1584513175-suror.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/4/suror/1584513373-suror.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/4/suror/1584513522-suror.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/beasiswa/4/suror/1584513611-suror.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/pemberdayaan/11/bukti_hafalan/1584533954_buktihafalan.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/pemberdayaan/11/cv/1584533954_cv.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/pemberdayaan/11/foto/1584533954_foto.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/pemberdayaan/11/ijazah/1584533954_ijazah.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/pemberdayaan/11/kartu-keluarga/1584533954_kk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/pemberdayaan/11/ktp/1584533954_ktp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/pemberdayaan/11/skck/1584533954_skck.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/pemberdayaan/11/surdes/1584533954_surdes.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/pemberdayaan/11/suror/1584533954_suor.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/pemberdayaan/2/bukti_hafalan/1584508350_buktihafalan.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/pemberdayaan/2/cv/1584508350_cv.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/pemberdayaan/2/foto/1584508350_foto.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/pemberdayaan/2/ijazah/1584508350_ijazah.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/pemberdayaan/2/kartu-keluarga/1584508350_kk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/pemberdayaan/2/ktp/1584508350_ktp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/pemberdayaan/2/skck/1584508350_skck.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/pemberdayaan/2/surdes/1584508350_surdes.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dokumenuser/pemberdayaan/2/suror/1584508350_suor.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/scholarship/register_scholarship.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/scholarship/register_scholarship.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +273,9 @@
       <workItem from="1584857305306" duration="1043000" />
       <workItem from="1584861558733" duration="143000" />
       <workItem from="1584862137010" duration="410000" />
-      <workItem from="1584864922415" duration="1430000" />
+      <workItem from="1584864922415" duration="3044000" />
+      <workItem from="1584923043077" duration="1828000" />
+      <workItem from="1585018767793" duration="5704000" />
     </task>
     <servers />
   </component>

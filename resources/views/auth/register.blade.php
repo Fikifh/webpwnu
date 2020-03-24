@@ -112,7 +112,7 @@
                 <form action="{{ url('register-user') }}" method="post">
                     {{ csrf_field() }}
                     <div class="input-group">
-                        <input required="true" class="form-control" type="email" placeholder="Email" name="email">
+                        <input required="true" class="form-control" type="number" placeholder="NIK" name="nik">
                     </div>
                     <div class="input-group">
                         <input required="true" class="form-control" type="password" placeholder="Password" name="password" id="txtPassword">
@@ -188,7 +188,7 @@
             var password = $("#txtPassword").val();
             var confirmPassword = $("#txtConfirmPassword").val();
             if (password != confirmPassword) {
-                alert("Passwords do not match.");
+                alert("Password tidak sama!");
                 return false;
             }
             return true;

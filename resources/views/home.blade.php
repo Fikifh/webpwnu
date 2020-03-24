@@ -29,7 +29,7 @@
     <![endif]-->
 
 </head>
-<body>
+<body onload="checkAlert({{Session::get('alert')}})">
 <!-- Page Preloder -->
 <div id="preloder">
     <div class="loader"></div>
@@ -85,7 +85,7 @@
                                 @if(\App\models\scholarship\DocumentModel::where('user_id', session('id'))->first())
                                     <a href="#" class="site-btn">Anda Terdaftar</a>
                                 @else
-                                    <a href="{{url('register-scholarship?email='.\Illuminate\Support\Facades\Session::get('email'))}}" class="site-btn">Upload Persyaratan</a>
+                                    <a href="{{url('register-scholarship?nik='.\Illuminate\Support\Facades\Session::get('nik'))}}" class="site-btn">Upload Persyaratan</a>
                                 @endif
                             @endif
                         </div>
@@ -109,14 +109,14 @@
                                 @if(\App\models\scholarship\DocumentModel::where('user_id', session('id'))->first())
                                     <a href="#" class="site-btn">Anda Terdaftar</a>
                                 @else
-                                    <a href="{{url('register-scholarship?email='.\Illuminate\Support\Facades\Session::get('email'))}}" class="site-btn">Upload Persyaratan</a>
+                                    <a href="{{url('register-scholarship?email='.\Illuminate\Support\Facades\Session::get('nik'))}}" class="site-btn">Upload Persyaratan</a>
                                 @endif
                             @endif
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="hr-img">
-                            <img src="{{ asset("bower_components/landing-page/img/nuconect.jpeg") }}" alt="">
+                            <img src="{{ asset("bower_components/landing-page/img/slide1.jpeg") }}" alt="">
                         </div>
                     </div>
                 </div>
@@ -319,7 +319,6 @@
                         <div class="footer-widget">
                             <h2>Products</h2>
                             <ul>
-                                <li><a href="">Lorem</a></li>
                                 <li><a href="">Subscription</a></li>
                                 <li><a href="">Footage</a></li>
                             </ul>
@@ -363,6 +362,13 @@
 <script src="{{ asset("/bower_components/landing-page/js/owl.carousel.min.js") }}"></script>
 <script src="{{ asset("/bower_components/landing-page/js/mixitup.min.js") }}"></script>
 <script src="{{ asset("/bower_components/landing-page/js/main.js") }}"></script>
-
+<script>
+    function checkAlert(isAlert) {
+        if(isAlert != null){
+            alert(isAlert);
+        }
+        return true;
+    }
+</script>
 </body>
 </html>

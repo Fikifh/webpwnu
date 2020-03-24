@@ -17,7 +17,6 @@ class Document extends Migration
             $table->bigIncrements('id');
             $table->bigInteger('user_id')->unsigned();
             $table->integer('type');
-            $table->string('nik');
             $table->string('education');
             $table->string('jumlah_hafalan');
             $table->string('ktp');

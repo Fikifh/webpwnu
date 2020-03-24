@@ -111,7 +111,7 @@
                 <form method="POST" {{url('login')}}>
                     {{csrf_field()}}
                     <div class="input-group">
-                        <input class="input--style-3" type="email" placeholder="Email" name="email">
+                        <input class="input--style-3" type="number" placeholder="NIK" name="nik">
                     </div>
                     <div class="input-group">
                         <input class="input--style-3" type="password" placeholder="Password" name="password">

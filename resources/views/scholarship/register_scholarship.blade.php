@@ -139,7 +139,7 @@
                             </div>
                             <div class="form-group">
                                 <input required class="form-control" type="number" name="nik"
-                                       placeholder="Nomor Induk Kependudukan (NIK)">
+                                       placeholder="Nomor Induk Kependudukan (NIK)" value="{{$user->nik}}" disabled>
                             </div>
                             <div class="form-group">
                                 <label class="form-control-file font-weight-bold">Pilih Pendidikan</label>
@@ -221,7 +221,7 @@
                             </div>
                             <div class="form-group">
                                 <input required class="form-control" type="number" name="nik"
-                                       placeholder="Nomor Induk Kependudukan (NIK)">
+                                       placeholder="Nomor Induk Kependudukan (NIK)" value="{{$user->nik}}" disabled>
                             </div>
                             <div class="form-group">
                                 <label class="form-control-file font-weight-bold">Pendidikan yang sedang Ditempuh</label>

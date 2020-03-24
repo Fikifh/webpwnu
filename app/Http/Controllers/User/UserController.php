@@ -27,16 +27,16 @@ class UserController extends Controller
     }
 
     public function loginPost(Request $request){
-        $email = $request->email;
+        $nik = $request->nik;
         $password = $request->password;
-        $data = User::where('email', $email)->first();
+        $data = User::where('nik', $nik)->first();
         if($data){
             if(Hash::check($password, $data->password)){
                 Session::put('id', $data->id);
                 Session::put('name', $data->name);
-                Session::put('email', $data->email);
+                Session::put('nik', $data->nik);
                 Session::put('login', true);
-                $credentials = $request->only('email', 'password');
+                $credentials = $request->only('nik', 'password');
                 Auth::guard('web')->attempt($credentials, $request->has('remember'));
                 $roleId = $data->roles_id;
                 $role = new User();
@@ -50,7 +50,7 @@ class UserController extends Controller
                 return redirect('login')->with('alert', 'Password yang anda masukan Salah !');
             }
         } else {
-            return redirect('login')->with('alert', 'Email yang anda masukan Salah !');
+            return redirect('login')->with('alert', 'NIK yang anda masukan Salah !');
         }
     }
 
@@ -66,14 +66,14 @@ class UserController extends Controller
     public function registerPost(Request $request){
         $this->validate($request, [
             'name' => 'required | min:4',
-            'email' => 'required|min:4|email|unique:users',
+            'nik' => 'required|unique:users',
             'password'=> 'required',
             'confirmation' => 'required|same:password'
         ]);
 
 
         $user = new User();
-        $user->email = $request->email;
+        $user->nik = $request->nik;
         $user->password = bcrypt($request->password);
         $user->name = $request->name;
         $user->gender = $request->gender;

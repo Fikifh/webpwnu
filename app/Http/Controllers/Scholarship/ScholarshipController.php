@@ -16,8 +16,8 @@ class ScholarshipController extends Controller
     }
 
     public function getRegisterScholarship(Request $request){
-        $email = $request->query('email');
-        $user = User::where('email', $email)->first();
+        $nik = $request->query('nik');
+        $user = User::where('nik', $nik)->first();
         return view('scholarship.register_scholarship', compact('user'));
     }
 
@@ -25,7 +25,6 @@ class ScholarshipController extends Controller
         $userId = $request->id;
         $documet = new DocumentModel();
 
-        $documet->nik = $request->nik;
         $documet->education = $request->education;
         $documet->jumlah_hafalan = $request->jumlah_hafalan;
         $documet->user_id = $userId;
@@ -75,19 +74,6 @@ class ScholarshipController extends Controller
         $skckFile->move($tujuan_skck, $skck);
         $documet->skck = $skck;
 
-//        $sur_ket_hafalanFile = $request->file('sur_ket_hafalan');
-//        $sur_ket_hafalan = time()."_".$sur_ket_hafalanFile"-..>$this->$this->extension();
-//        $tujuan_sur_ket_hafalan = 'dokumenuser/pemberdayaan/'.$userId.'/sur_ket_hafalan';
-//        $sur_ket_hafalanFile->move($tujuan_sur_ket_hafalan, $sur_ket_hafalan);
-//        $documet->sur_ket_hafalan = $sur_ket_hafalan;
-
-
-//        $syahadahFile = $request->file('syahadah');
-//        $syahadah = time()."_".$syahadahFile"-..>$this->$this->extension();
-//        $tujuan_syahadah = 'dokumenuser/pemberdayaan/'.$userId.'/syahadah';
-//        $syahadahFile->move($tujuan_syahadah, $syahadah);
-//        $documet->syahadah = $syahadah;
-
         $cvFile = $request->file('cv');
         $cv = time()."_"."cv.".$cvFile->extension();
         $tujuan_cv = 'dokumenuser/pemberdayaan/'.$userId.'/cv';
@@ -112,7 +98,6 @@ class ScholarshipController extends Controller
         $userId = $request->id;
         $documet = new DocumentModel();
 
-        $documet->nik = $request->nik;
         $documet->school_name = $request->school_name;
         $documet->school_class = $request->school_class;
         $documet->jumlah_hafalan = $request->jumlah_hafalan;
@@ -163,19 +148,6 @@ class ScholarshipController extends Controller
         $skckFile->move($tujuan_skck, $skck);
         $documet->skck = $skck;
 
-//        $sur_ket_hafalanFile = $request->file('sur_ket_hafalan');
-//        $sur_ket_hafalan = time()."_".$sur_ket_hafalanFile"-..>$this->$this->extension();
-//        $tujuan_sur_ket_hafalan = 'dokumenuser/beasiswa/'.$userId.'/sur_ket_hafalan';
-//        $sur_ket_hafalanFile->move($tujuan_sur_ket_hafalan, $sur_ket_hafalan);
-//        $documet->sur_ket_hafalan = $sur_ket_hafalan;
-
-
-//        $syahadahFile = $request->file('syahadah');
-//        $syahadah = time()."_".$syahadahFile"-..>$this->$this->extension();
-//        $tujuan_syahadah = 'dokumenuser/beasiswa/'.$userId.'/syahadah';
-//        $syahadahFile->move($tujuan_syahadah, $syahadah);
-//        $documet->syahadah = $syahadah;
-
         $cvFile = $request->file('cv');
         $cv = time()."-"."cv.".$cvFile->extension();
         $tujuan_cv = 'dokumenuser/beasiswa/'.$userId.'/cv';
@@ -194,8 +166,6 @@ class ScholarshipController extends Controller
             $message = 'Berhasil Upload';
             return redirect('/')->with('alert-success', 'Berhasil Upload');
         }
-
-
     }
 
 }
