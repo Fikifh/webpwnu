@@ -18,17 +18,17 @@ use Barryvdh\DomPDF\Facade as PDF;
 class AdminController extends Controller
 {
     public function index(){
-        $user = DocumentModel::where('type', 1)->get();
+        $user = DocumentModel::where('type', 1)->paginate(10);
         return view('admin_home', compact('user'));
     }
     public function list(Request $request){
         $type = $request->type;
-        $user = DocumentModel::where('type', $type)->get();
+        $user = DocumentModel::where('type', $type)->paginate(10);
         return view('admin_home', compact('user'));
     }
     public function search(Request $request){
         $query = $request->search;
-        $user = DocumentModel::join('users', 'documents.user_id', 'users.id')->where('users.name', 'like', '%'.$query.'%')->get();
+        $user = DocumentModel::join('users', 'documents.user_id', 'users.id')->where('users.name', 'like', '%'.$query.'%')->paginate(10);
         return view('admin_home', compact('user'));
     }
     public function exportPemberdayaanToExcel(){

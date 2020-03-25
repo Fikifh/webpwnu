@@ -46,6 +46,14 @@
             document.getElementById("type").selectedIndex = ""+type+"";
         }
     </script>
+    <style type="text/css">
+        .pagination li{
+            float: left;
+            list-style-type: none;
+            display: inline-block;
+            margin:5px;
+        }
+    </style>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -817,8 +825,8 @@
                     <div class="col col-sm-12">
                         <form method="GET" action="{{url('admin/list')}}">
                             <select class="form-group" name="type" id="type">
-                                <option value="1">Pemberdayaan</option>
-                                <option value="2">Beasiswa</option>
+                                <option value="1" id="select1">Pemberdayaan</option>
+                                <option value="2" id="select2">Beasiswa</option>
                             </select>
                             <input type="submit" class="fa fa-filter" value="Filter">
                         </form>
@@ -881,6 +889,12 @@
                         @endforeach
                         </tbody>
                     </table>
+                    <div class="text-sm">
+                        Halaman : {{ $user->currentPage() }}<br>
+                        Jumlah Data : {{ $user->total() }}<br>
+                        Data Per Halaman : {{ $user->perPage() }}<br>
+                        {{ $user->appends(request()->input())->links()}}
+                    </div>
                     <!-- End Table -->
 
 
