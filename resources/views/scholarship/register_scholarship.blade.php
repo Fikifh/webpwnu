@@ -59,6 +59,9 @@
 </head>
 
 <body>
+@if(!\Illuminate\Support\Facades\Auth::user())
+    <script>window.location = "/";</script>
+@endif
 <!-- Page Preloder -->
 <div id="preloder">
     <div class="loader"></div>

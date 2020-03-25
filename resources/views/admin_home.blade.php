@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    <!-- Favicon -->
+    <link href="{{ asset("/bower_components/landing-page/img/pwnulogo.jpg") }}" rel="shortcut icon"/>
+
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Font Awesome -->
@@ -55,6 +58,9 @@
         }
     </style>
 </head>
+@if(!\Illuminate\Support\Facades\Auth::user())
+    <script>window.location = "/";</script>
+@endif
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
 
@@ -825,13 +831,18 @@
                     <div class="col col-sm-12">
                         <form method="GET" action="{{url('admin/list')}}">
                             <select class="form-group" name="type" id="type">
-                                @if($user->first()->type == 1)
-                                <option value="1" selected>Pemberdayaan</option>
-                                <option value="2" id="select2">Beasiswa</option>
+                                @if(count($user)<1)
+                                    <option value="1" selected>Pemberdayaan</option>
+                                    <option value="2" id="select2">Beasiswa</option>
+                                @else
+                                    @if($user->first()->type == 1)
+                                        <option value="1" selected>Pemberdayaan</option>
+                                        <option value="2" id="select2">Beasiswa</option>
                                     @else
-                                    <option value="1">Pemberdayaan</option>
-                                    <option value="2" selected>Beasiswa</option>
+                                        <option value="1">Pemberdayaan</option>
+                                        <option value="2" selected>Beasiswa</option>
                                     @endif
+                                @endif
                             </select>
                             <input type="submit" class="fa fa-filter" value="Filter">
                         </form>
@@ -878,19 +889,19 @@
                                 @endif
                                 <td>{{$userData->jumlah_hafalan}}</td>
                                 <td>
-                                    <a class="btn btn-info btn-sm" href="{{url('admin/detail/'.$userData->user_id)}}">
-                                        <button alt="Lihat File" class="fa fa-eye fa-circle bg-white">Lihat</button>
+                                    <a href="{{url('admin/detail/'.$userData->user_id)}}">
+                                        <button class="btn-success fa fa-eye-slash">Lihat</button>
                                     </a>
-                                    <a class="btn btn-info btn-sm" href="{{url('admin/download-zip/'.$userData->user_id.'/'.$userTable->name)}}">
-                                        <button alt="Download  File" class="fa fa-download fa-circle bg-white">Zip</button>
+                                    <a href="{{url('admin/download-zip/'.$userData->user_id.'/'.$userTable->name)}}">
+                                        <button class="btn-success fa fa-file-zip-o">Zip</button>
                                     </a>
-                                    <a class="btn btn-info btn-sm" href="{{url('admin/print-to-pdf/'.$userData->user_id)}}">
-                                        <button alt="Print to PDF File" class="fa fa-print">PDF</button>
+                                    <a href="{{url('admin/print-to-pdf/'.$userData->user_id)}}">
+                                        <button class="btn-success fa fa-file-pdf">PDF</button>
                                     </a>
                                 </td>
                                 <td>
-                                    <a class="btn btn-info btn-sm" href="{{url('admin/print-to-printer/'.$userData->user_id)}}" target="_blank">
-                                        <button alt="Lihat File" class="fa fa-print">Print</button>
+                                    <a href="{{url('admin/print-to-printer/'.$userData->user_id)}}" target="_blank">
+                                        <button class="btn-success fa fa-print">Print</button>
                                     </a>
                                 </td>
                             </tr>
