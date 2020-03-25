@@ -789,8 +789,10 @@
                             <div class="icon">
                                 <i class="ion ion-person-add"></i>
                             </div>
-                            <a href="{{url('admin/download-all-files')}}" class="small-box-footer">Download Semua File
+                            @if($participant > 0)
+                                <a href="{{url('admin/download-all-files')}}" class="small-box-footer">Download Semua File
                                 <i class="fas fa-file-download"></i></a>
+                            @endif
                         </div>
                     </div>
                     <!-- ./col -->
