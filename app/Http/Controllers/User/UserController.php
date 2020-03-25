@@ -42,9 +42,11 @@ class UserController extends Controller
                 $role = new User();
                 $userRole = $role->roles($roleId);
                 if($userRole->role_name === 'admin'){
+                    Session::put('role', 'admin');
                     $user = DocumentModel::all();
                     return redirect('admin');
                 }
+                Session::put('role', 'user');
                 return redirect('/')->with('alert-success', 'Berhasil Masuk');
             } else {
                 return redirect('login')->with('alert', 'Password yang anda masukan Salah !');

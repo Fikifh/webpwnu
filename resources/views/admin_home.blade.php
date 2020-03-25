@@ -61,6 +61,9 @@
 @if(!\Illuminate\Support\Facades\Auth::user())
     <script>window.location = "/";</script>
 @endif
+@if(session('role') == "user")
+    <script>window.location = "/";</script>
+@endif
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
 
@@ -883,10 +886,10 @@
                                 <td>{{$userTable->address}}</td>
                                 <td>{{$userTable->phone}}</td>
                                 @if($userData->type = 1)
-                                <td>{{$userData->education}}</td>
-                                @else
-                                    <td>{{$userData->school_name}} / {{$userData->school_class}}</td>
-                                @endif
+                                    <td>{{$userData->education}}</td>
+                                    @else
+                                        <td>{{$userData->school_name}} / {{$userData->school_class}}</td>
+                                        @endif
                                 <td>{{$userData->jumlah_hafalan}}</td>
                                 <td>
                                     <a href="{{url('admin/detail/'.$userData->user_id)}}">
