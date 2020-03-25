@@ -825,8 +825,13 @@
                     <div class="col col-sm-12">
                         <form method="GET" action="{{url('admin/list')}}">
                             <select class="form-group" name="type" id="type">
-                                <option value="1" id="select1">Pemberdayaan</option>
+                                @if($user->first()->type == 1)
+                                <option value="1" selected>Pemberdayaan</option>
                                 <option value="2" id="select2">Beasiswa</option>
+                                    @else
+                                    <option value="1">Pemberdayaan</option>
+                                    <option value="2" selected>Beasiswa</option>
+                                    @endif
                             </select>
                             <input type="submit" class="fa fa-filter" value="Filter">
                         </form>
@@ -839,10 +844,11 @@
                     <table class="table table-responsive table-bordered table-striped" style="width:100%;">
                         <thead>
                         <tr>
-                            <th>ID</th>
+                            <th>No</th>
+                            <th>Id</th>
                             <th>Nama</th>
                             <th>NIK</th>
-                            <th>Gender</th>
+                            <th>Jenis Kelamin</th>
                             <th>TTL</th>
                             <th>Alamat</th>
                             <th>No. Hp</th>
@@ -853,9 +859,11 @@
                         </tr>
                         </thead>
                         <tbody>
+                        <p hidden="true">{{$i=1}}</p>
                         @foreach($user as $userData)
                             <input type="text" hidden="true" {{$userTable = \App\User::find($userData->user_id)}} />
                             <tr>
+                                <td>{{$i++}}</td>
                                 <td>{{$userTable->id}}</td>
                                 <td>{{$userTable->name}}</td>
                                 <td>{{$userTable->nik}}</td>
