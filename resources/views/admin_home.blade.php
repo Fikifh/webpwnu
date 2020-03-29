@@ -42,19 +42,20 @@
     <script>
         function getType() {
             var type = document.getElementById('type');
-            var opt =  type.options[type.selectedIndex];
+            var opt = type.options[type.selectedIndex];
             return opt.value;
         }
-        function setType(type){
-            document.getElementById("type").selectedIndex = ""+type+"";
+
+        function setType(type) {
+            document.getElementById("type").selectedIndex = "" + type + "";
         }
     </script>
     <style type="text/css">
-        .pagination li{
+        .pagination li {
             float: left;
             list-style-type: none;
             display: inline-block;
-            margin:5px;
+            margin: 5px;
         }
     </style>
 </head>
@@ -86,7 +87,8 @@
         <form method="GET" action="{{url('admin/search')}}" class="form-inline ml-3">
             {{csrf_field()}}
             <div class="input-group input-group-sm">
-                <input name="search" class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+                <input name="search" class="form-control form-control-navbar" type="search" placeholder="Search"
+                       aria-label="Search">
                 <div class="input-group-append">
                     <button class="btn btn-navbar" type="submit">
                         <i class="fas fa-search"></i>
@@ -216,26 +218,48 @@
                                 <i class="right fas fa-angle-left"></i>
                             </p>
                         </a>
-                        {{--            <ul class="nav nav-treeview">--}}
-                        {{--              <li class="nav-item">--}}
-                        {{--                <a href="./index.html" class="nav-link active">--}}
-                        {{--                  <i class="far fa-circle nav-icon"></i>--}}
-                        {{--                  <p>Dashboard v1</p>--}}
-                        {{--                </a>--}}
-                        {{--              </li>--}}
-                        {{--              <li class="nav-item">--}}
-                        {{--                <a href="./index2.html" class="nav-link">--}}
-                        {{--                  <i class="far fa-circle nav-icon"></i>--}}
-                        {{--                  <p>Dashboard v2</p>--}}
-                        {{--                </a>--}}
-                        {{--              </li>--}}
-                        {{--              <li class="nav-item">--}}
-                        {{--                <a href="./index3.html" class="nav-link">--}}
-                        {{--                  <i class="far fa-circle nav-icon"></i>--}}
-                        {{--                  <p>Dashboard v3</p>--}}
-                        {{--                </a>--}}
-                        {{--              </li>--}}
-                        {{--            </ul>--}}
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="./index.html" class="nav-link active">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Banner</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="./index.html" class="nav-link active">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Kegiatan</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="./index.html" class="nav-link active">
+                                    <i class="far fa-info nav-icon"></i>
+                                    <p>Informasi</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{url('admin')}}" class="nav-link active">
+                            <i class="nav-icon fas fa-cloud-upload-alt"></i>
+                            <p>
+                                Upload PDF
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{url('admin')}}" class="nav-link active">
+                            <i class="nav-icon fas fa-cash-register"></i>
+                            <p>
+                                Pendaftaran
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
                     </li>
                     {{--          <li class="nav-item">--}}
                     {{--            <a href="pages/widgets.html" class="nav-link">--}}
@@ -790,8 +814,9 @@
                                 <i class="ion ion-person-add"></i>
                             </div>
                             @if($participant > 0)
-                                <a href="{{url('admin/download-all-files')}}" class="small-box-footer">Download Semua File
-                                <i class="fas fa-file-download"></i></a>
+                                <a href="{{url('admin/download-all-files')}}" class="small-box-footer">Download Semua
+                                    File
+                                    <i class="fas fa-file-download"></i></a>
                             @endif
                         </div>
                     </div>
@@ -855,8 +880,8 @@
                 </div>
                 <!-- Main row -->
                 <div class="row">
-{{--                    <input type="text" hidden="true" value="{{$user = \App\models\scholarship\DocumentModel::all()}}">--}}
-                    <!-- Table -->
+                {{--                    <input type="text" hidden="true" value="{{$user = \App\models\scholarship\DocumentModel::all()}}">--}}
+                <!-- Table -->
                     <table class="table table-responsive table-bordered table-striped" style="width:100%;">
                         <thead>
                         <tr>
@@ -889,9 +914,9 @@
                                 <td>{{$userTable->phone}}</td>
                                 @if($userData->type = 1)
                                     <td>{{$userData->education}}</td>
-                                    @else
-                                        <td>{{$userData->school_name}} / {{$userData->school_class}}</td>
-                                        @endif
+                                @else
+                                    <td>{{$userData->school_name}} / {{$userData->school_class}}</td>
+                                @endif
                                 <td>{{$userData->jumlah_hafalan}}</td>
                                 <td>
                                     <a href="{{url('admin/detail/'.$userData->user_id)}}">

@@ -19,7 +19,7 @@ class AdminController extends Controller
 {
     public function index(){
         $user = DocumentModel::where('type', 1)->paginate(10);
-        return view('admin_home', compact('user'));
+        return view('admin.Parent.dashboard', compact('user'));
     }
     public function list(Request $request){
         $type = $request->type;

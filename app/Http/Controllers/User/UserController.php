@@ -18,7 +18,7 @@ class UserController extends Controller
         if(!Session::get('login')){
             return redirect()->to('login')->with('alert','Anda harus login terlebih dahulu !');
         }else {
-            return view('home');
+            return redirect(route('index'));
         }
     }
 

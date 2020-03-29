@@ -16,8 +16,87 @@ html,
 body {
 	height: 100%;
 	font-family: "Montserrat", sans-serif;
-	-webkit-font-smoothing: antialiased;
-	font-smoothing: antialiased;
+}
+.text-foot {
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.article-image {
+    height: 600px;
+    width: 700px;
+}
+.hover-text:hover {
+    color: #0b2e13;
+}
+.hover-text {
+    color: #00A000;
+}
+.card-hovers:hover .card-hovers img{
+    box-shadow: black;
+    -webkit-transform-style: preserve-3d;
+}
+.activity-gallery {
+    margin-top: 10px;
+    padding: 0px !important;
+}
+.hover-appear {
+    padding: 0px;
+}
+.image-top-activity {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+.foot-card {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    display: block;
+    height: 95px;
+    background-color: black;
+    color : white;
+    opacity: 0.6;
+}
+.foot-card h5 {
+    opacity: 1;
+    color: white;
+}
+
+.hover-appear:hover .image-top-activity {
+    opacity: 0.3;
+}
+.hover-appear:hover .foot-card{
+    opacity: 0;
+}
+
+.hover-appear:hover .middle {
+    opacity: 1;
+}
+
+.text {
+    background-color: #4CAF50;
+    color: black;
+    font-size: 16px;
+    padding: 16px 32px;
 }
 
 #footer-logo {

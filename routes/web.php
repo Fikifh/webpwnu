@@ -13,10 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', 'Index\IndexController@index')->name('index');
+/**
+ * V2
+ */
+Route::get('article/{link}', 'User\Article\ArticleController@articleByLink')->name('show.article');
+Route::get('artikel/{link}', 'User\Article\ArticleController@articleByLink');
 
+/**
+ * v1
+ */
 Route::get('login', function () {
     return view('auth.login');
 });
@@ -57,6 +63,39 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => ['rol
     //Export to Excel
     Route::get('export-pemberdayaan-to-excel', 'AdminController@exportPemberdayaanToExcel');
     Route::get('export-beasiswa-to-excel', 'AdminController@exportScholarshipToExcel');
+
+    //new features
+    Route::get('banner', 'BannerController@index')->name('banner');
+    Route::post('banner', 'BannerController@addBanner');
+    Route::get('banner/show/{id}', 'BannerController@viewBanner');
+    Route::get('banner/unshow/{id}', 'BannerController@unViewBanner');
+    Route::delete('banner', 'BannerController@delete')->name('banner.destroy');
+    Route::post('banneredit', 'BannerController@updateBanner')->name('bannerupdate');
+    Route::get('banner/edit/{id}', 'BannerController@getEdit');
+
+    //Kegitana
+    Route::get('kegiatan', 'Kegiatan\KegiatanController@index');
+    Route::post('kegiatan', 'Kegiatan\KegiatanController@store')->name('kegiatan.add');
+    Route::get('kegiatan/add', function (){
+        return view('admin.kegiatan.add_kegiatan');
+    });
+
+    //Informasi
+    Route::get('informasi', 'Informasi\InformasiController@index');
+    Route::post('informasi', 'Informasi\InformasiController@store')->name('informasi.add');
+    Route::get('informasi/add', function (){
+        return view('admin.informasi.add_informasi');
+    })->name('informasi.get.add');
+
+    //Pendaftaran
+    Route::get('pendaftaran', 'Pendaftaran\PendaftaranController@index')->name('pendaftaran');
+    Route::post('pendaftaran/open', 'Pendaftaran\PendaftaranController@openPendaftaran')->name('pendaftaran.open');
+    Route::post('pendaftaran/close', 'Pendaftaran\PendaftaranController@closePendaftaran')->name('pendaftaran.close');
+    Route::post('pendaftaran', 'Pendaftaran\PendaftaranController@store')->name('pendaftaran.store');
+    Route::get('pendaftaran/add', function (){
+        return view('admin.pendaftaran.add_pendaftaran');
+    })->name('pendaftaran.get.add');
+
 });
 
 //Route::get('/home', 'HomeController@index')->name('home');
