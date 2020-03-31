@@ -71,7 +71,7 @@
             </div>
             <div class="row" style="margin-top: 10px;">
                 @for($i=2; $i<count($articles); $i++)
-                    <div class="col-sm-3">
+                    <div class="col-sm-3 card-be-hover">
                         <div class="card card-hovers">
                             @if($articles[$i]->categories_id == 1)
                                 <img class="card-img-top"
@@ -112,7 +112,7 @@
                 <div class="col-sm-8">
                     <div class="row">
                         @foreach($articles as $data)
-                            <div class="col-sm-4">
+                            <div class="col-sm-4 card-be-hover">
                                 <div class="card card-hovers">
                                     @if($data->categories_id == 1)
                                         <img class="card-img-top"

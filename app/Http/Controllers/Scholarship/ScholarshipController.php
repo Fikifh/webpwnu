@@ -18,7 +18,7 @@ class ScholarshipController extends Controller
     public function getRegisterScholarship(Request $request){
         $nik = $request->query('nik');
         $user = User::where('nik', $nik)->first();
-        return view('scholarship.register_scholarship', compact('user'));
+        return view('user.registration.schoolarship_register', compact('user'));
     }
 
     public function registerEmpowermentPost(Request $request){

@@ -2,27 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdeacd53-bcb3-4fdf-99dc-f298b5db0619" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/Parent/dashboard.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/Parent/parent.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/banner/banner.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/banner/editbanner.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/informasi/add_informasi.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/informasi/informasi.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/kegiatan/add_kegiatan.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/kegiatan/kegiatan.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/pendaftaran/add_pendaftaran.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/pendaftaran/pendaftaran.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/user/artikel/artikel_show.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/user/parent/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/user/parent/user_home.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/user/registration/register_info.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/user/registration/create_account.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/user/registration/login.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/user/registration/schoolarship_register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Scholarship/ScholarshipController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Scholarship/ScholarshipController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/bower_components/landing-page/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/bower_components/landing-page/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin_home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin_home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/Parent/parent.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/Parent/parent.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/parent/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/parent/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/parent/user_home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/parent/user_home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -236,7 +225,9 @@
       <workItem from="1585139788885" duration="7934000" />
       <workItem from="1585381669962" duration="8865000" />
       <workItem from="1585392567198" duration="21161000" />
-      <workItem from="1585450737755" duration="48066000" />
+      <workItem from="1585450737755" duration="48220000" />
+      <workItem from="1585581819986" duration="587000" />
+      <workItem from="1585617243982" duration="9075000" />
     </task>
     <servers />
   </component>

@@ -28,6 +28,8 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    @yield('style')
+
 </head>
 <body onload="checkAlert({{Session::get('alert')}})">
 <!-- Page Preloder -->
@@ -79,7 +81,7 @@
     @yield('content')
 <!-- Hero section end -->
 <!-- Intro section -->
-<section class="intro-section spad">
+<section class="intro-section spad" style="background-color: ghostwhite">
     <div class="container">
         {{--        <div class="row">--}}
         <div class="col-lg-12">

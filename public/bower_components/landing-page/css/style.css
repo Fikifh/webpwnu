@@ -33,9 +33,13 @@ body {
 .hover-text {
     color: #00A000;
 }
-.card-hovers:hover .card-hovers img{
-    box-shadow: black;
+.card-hovers:hover {
+    box-shadow: 2px 1px rgba(0, 0, 0, 0.41);
     -webkit-transform-style: preserve-3d;
+    transition-property: all;
+    transition-duration: 3s;
+    transform: translate(0, -5px);
+    /*box-shadow: 2px 5px rgba(0, 0, 0, 0.17);*/
 }
 .activity-gallery {
     margin-top: 10px;
@@ -83,6 +87,8 @@ body {
 
 .hover-appear:hover .image-top-activity {
     opacity: 0.3;
+    transition-property: all;
+    transition-duration: 3s;
 }
 .hover-appear:hover .foot-card{
     opacity: 0;

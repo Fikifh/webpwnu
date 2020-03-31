@@ -24,15 +24,15 @@ Route::get('artikel/{link}', 'User\Article\ArticleController@articleByLink');
  * v1
  */
 Route::get('login', function () {
-    return view('auth.login');
-});
+    return view('user.registration.login');
+})->name('login.get');
 Route::post('login', 'User\UserController@loginPost');
 Route::get('logout', 'User\UserController@logout');
 
 
 Route::get('register', function () {
-    return view('auth.register');
-});
+    return view('user.registration.create_account');
+})->name('register.get');
 Route::post('register-user', 'User\UserController@registerPost');
 
 Route::get('register-scholarship', 'Scholarship\ScholarshipController@getRegisterScholarship');
