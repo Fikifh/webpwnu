@@ -7,7 +7,7 @@
     <style>
         .register {
             /*background: -webkit-linear-gradient(left, #3931af, #00c6ff);*/
-            background: -webkit-linear-gradient(left, #07af1d, #abff05);
+            background: -webkit-linear-gradient(left, #35af59, #acff44);
             margin-top: 3%;
             padding: 3%;
         }

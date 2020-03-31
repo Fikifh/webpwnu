@@ -96,6 +96,14 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => ['rol
         return view('admin.pendaftaran.add_pendaftaran');
     })->name('pendaftaran.get.add');
 
+
+    //UPLOAD FILES
+    Route::get('files', 'UploadFileFdf\UploadFileFdfController@index')->name('files.get');
+    Route::post('files', 'UploadFileFdf\UploadFileFdfController@updloadFile')->name('uploadfile');
+    Route::get('files/download', 'UploadFileFdf\UploadFileFdfController@download')->name('files.download');
+    Route::get('files/del', 'UploadFileFdf\UploadFileFdfController@deleteFile')->name('files.delete');
+    Route::get('files/hide/{id}', 'UploadFileFdf\UploadFileFdfController@hideFile')->name('files.hide');
+
 });
 
 //Route::get('/home', 'HomeController@index')->name('home');

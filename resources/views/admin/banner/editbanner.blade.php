@@ -46,7 +46,7 @@
                         <small id="satusHelp" class="form-text text-muted">Uncheck Status jika banner ingin
                             disembunyikan</small>
                     @else
-                        <input checked id="status-edit" name="status" type="checkbox" checked data-toggle="toggle"
+                        <input id="status-edit" name="status" type="checkbox" data-toggle="toggle"
                                class="form-control col-sm-1" id="status" aria-describedby=statusHelp"
                                placeholder="Centang atau buka centang">
                         <small id="satusHelp" class="form-text text-muted">centang Status jika banner ingin
