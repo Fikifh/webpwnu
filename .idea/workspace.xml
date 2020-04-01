@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdeacd53-bcb3-4fdf-99dc-f298b5db0619" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/banner/editbanner.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/banner/editbanner.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,7 +219,7 @@
       <workItem from="1585450737755" duration="48220000" />
       <workItem from="1585581819986" duration="587000" />
       <workItem from="1585617243982" duration="20998000" />
-      <workItem from="1585730255786" duration="84000" />
+      <workItem from="1585730255786" duration="733000" />
     </task>
     <servers />
   </component>
