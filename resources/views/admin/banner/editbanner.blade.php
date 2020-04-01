@@ -50,7 +50,7 @@
                                class="form-control col-sm-1" id="status" aria-describedby=statusHelp"
                                placeholder="Centang atau buka centang">
                         <small id="satusHelp" class="form-text text-muted">centang Status jika banner ingin
-                            ditampilkan</small>
+                            ditampilkan </small>
                     @endif
                 </div>
                 <div class="form-group">
