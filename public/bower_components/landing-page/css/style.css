@@ -33,11 +33,14 @@ body {
 .hover-text {
     color: #00A000;
 }
+.card-be-hover {
+    margin-top: 10px;
+}
 .card-hovers:hover {
     box-shadow: 2px 1px rgba(0, 0, 0, 0.41);
     -webkit-transform-style: preserve-3d;
     transition-property: all;
-    transition-duration: 3s;
+    transition-duration: 1s;
     transform: translate(0, -5px);
     -webkit-tap-highlight-color : transparent;
     /*box-shadow: 2px 5px rgba(0, 0, 0, 0.17);*/

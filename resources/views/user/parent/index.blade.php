@@ -1,5 +1,5 @@
 @extends('user.parent.user_home')
-@section('title', 'Sadesha')
+@section('title', 'PWJQHNU')
 @section('content')
 
     <!-- Hero section -->
@@ -70,21 +70,26 @@
                 @endif
             </div>
             <div class="row" style="margin-top: 10px;">
-                @for($i=2; $i<count($articles); $i++)
+                @for($i=2; $i<count($toparticles); $i++)
                     <div class="col-sm-3 card-be-hover">
                         <div class="card card-hovers">
-                            @if($articles[$i]->categories_id == 1)
+                            @if($toparticles[$i]->categories_id == 1)
                                 <img class="card-img-top"
-                                     src="{{asset("/files/kegiatan/".$articles[$i]->image)}}"
+                                     src="{{asset("/files/kegiatan/".$toparticles[$i]->image)}}"
+                                     alt="Card image cap">
+                            @endif
+                            @if($toparticles[$i]->categories_id == 2)
+                                <img class="card-img-top"
+                                     src="{{asset("/files/informasi/".$toparticles[$i]->image)}}"
                                      alt="Card image cap">
                             @else
                                 <img class="card-img-top"
-                                     src="{{asset("/files/informasi/".$articles[$i]->image)}}"
+                                     src="{{asset("/files/kegiatan/".$toparticles[$i]->image)}}"
                                      alt="Card image cap">
                             @endif
                             <div class="card-body">
-                                <p class="card-title">{{$articles[$i]->title}}</p>
-                                <a href="{{url("artikel/".$articles[$i]->link)}}"
+                                <p class="card-title">{{$toparticles[$i]->title}}</p>
+                                <a href="{{url("artikel/".$toparticles[$i]->link)}}"
                                    class="btn btn-outline-success"><img
                                         src="{{asset("/icons/arrow-right-circle.svg")}}"></a>
                             </div>
@@ -124,9 +129,9 @@
                                              alt="Card image cap">
                                     @endif
                                     <div class="card-body">
-                                        <p class="card-title">{{$data->title}}</p>
-                                        <a href="{{url("artikel/".$data->link)}}" class="btn btn-outline-success">
-                                            <img src="{{asset("/icons/arrow-right-circle.svg")}}">
+                                        <p class="card-title" style="color: black; font-family: Sans-Serif">{{$data->title}}</p>
+                                        <a href="{{url("artikel/".$data->link)}}" class="float-right" style="font-family: Sans-Serif; font-size: 12px; color: green;">
+                                            Baca Selengkapnya <img src="{{asset("/icons/arrow-right-circle.svg")}}">
                                         </a>
                                     </div>
                                 </div>

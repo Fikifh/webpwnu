@@ -3,8 +3,8 @@
 <head>
     <title>@yield('title')</title>
     <meta charset="UTF-8">
-    <meta name="description" content="Website Pendaftaran Beasiswa dan Pemberdayaan Sadesha Jawa Barat">
-    <meta name="keywords" content="sadesha, pwnu, nu, nahdatul ulama, nkri">
+    <meta name="description" content="Website Resmi PWJQHNU Jawa Barat">
+    <meta name="keywords" content="pwjqhnu, pcjqhnu, sadesha, pwnu, nu, nahdatul ulama, nkri">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Favicon -->
@@ -39,7 +39,7 @@
 
 <!-- Header section -->
 <header class="header-section clearfix">
-    <a href="index.html" class="site-logo">
+    <a href="{{url("/")}}" class="site-logo">
         <img id="header-logo" src="{{ asset("/bower_components/landing-page/img/pwnulogo.jpg") }}" alt="">
     </a>
     <div class="header-right">
@@ -58,23 +58,23 @@
         @endif
     </div>
     <ul class="main-menu">
-        <li><a href="#">Beranda</a></li>
-        <li><a href="#">Profil</a></li>
-        <li><a href="#">Organisasi</a>
+        <li><a href="{{url("/")}}">Beranda</a></li>
+        <li><a href="{{url("artikel/Profil-PWJQHNU")}}">Profil</a></li>
+        <li><a href="{{url("organisasi")}}">Organisasi</a>
             <ul class="sub-menu">
-                <li><a href="#">PWJQHNU</a></li>
-                <li><a href="#">PCJQHNU</a></li>
+                <li><a href="{{url("pwjqhnu")}}">PWJQHNU</a></li>
+                <li><a href="{{url("pcjqhnu")}}">PCJQHNU</a></li>
             </ul>
         </li>
-        <li><a href="#">Keislaman</a></li>
-        <li><a href="#">Download PDF</a></li>
-        <li><a href="#">Sadesha</a>
+        <li><a href="{{url("keislaman")}}">Keislaman</a></li>
+        <li><a href="{{url("downloads")}}">Download PDF</a></li>
+        <li><a href="{{url("sadesha")}}">Sadesha</a>
             <ul class="sub-menu">
-                <li><a href="#">PWJQHNU</a></li>
-                <li><a href="#">PCJQHNU</a></li>
+                <li><a href="{{url("pwjqhnu")}}">PWJQHNU</a></li>
+                <li><a href="{{url("pcjqhnu")}}">PCJQHNU</a></li>
             </ul>
         </li>
-        <li><a href="#">Donasi Program</a></li>
+        <li><a href="{{url("donasi-program")}}">Donasi Program</a></li>
     </ul>
 </header>
 <!-- Header section end -->

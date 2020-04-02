@@ -6,7 +6,16 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                    <h1>{{$article->title}}</h1>
+                    <h1 style="font-size: 65px; text-align: center; margin-bottom: 35px;">{{$article->title}}</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8">
+                    @if($article->categories_id == 1)
+                        <img src="{{asset("/files/kegiatan/".$article->image)}}" class="col-sm-12 article-image"/>
+                    @else
+                        <img src="{{asset("/files/informasi/".$article->image)}}" class="col-sm-12 article-image"/>
+                    @endif
                 </div>
             </div>
             <div class="row">
@@ -21,15 +30,6 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-8">
-                    @if($article->categories_id == 1)
-                        <img src="{{asset("/files/kegiatan/".$article->image)}}" class="col-sm-12 article-image"/>
-                    @else
-                        <img src="{{asset("/files/informasi/".$article->image)}}" class="col-sm-12 article-image"/>
-                    @endif
-                </div>
-            </div>
-            <div class="row">
                 <div class="col-sm-8" style="text-align: justify">
                     <p style="text-align: justify;">
                         {!! html_entity_decode($article->content) !!}
@@ -38,7 +38,7 @@
                 <div class="col-sm-4">
                     <h5 style="margin: 15px">Related Post</h5>
                     @foreach($articles as $data)
-                        <div class="col-sm-6">
+                        <div class="col-sm-6 card-be-hover">
                             <div class="card card-hovers">
                                 @if($data->categories_id == 1)
                                     <img class="card-img-top"

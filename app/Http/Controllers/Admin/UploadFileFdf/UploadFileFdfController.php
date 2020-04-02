@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin\UploadFileFdf;
 
 use App\Http\Controllers\Controller;
 use App\Models\MasterFile;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
 
@@ -40,7 +41,7 @@ class UploadFileFdfController extends Controller
         $headers = array(
             'Content-Type: application/'.$extension,
         );
-        return response()->download($file, $name, $headers)->with('alert-success', 'File tidak ditemukan!');;
+        return \response()->download($file, $name, $headers);
     }
 
     public function deleteFile(Request $request){

@@ -14,11 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'Index\IndexController@index')->name('index');
+//Route::get('/', function (){
+//   return view('index');
+//});
 /**
  * V2
  */
 Route::get('article/{link}', 'User\Article\ArticleController@articleByLink')->name('show.article');
 Route::get('artikel/{link}', 'User\Article\ArticleController@articleByLink');
+Route::group(['middleware'=>'cors'], function (){
+    Route::get('downloads', 'User\Downloads\DownloadController@index')->name('downloads');
+});
 
 /**
  * v1
